@@ -25,6 +25,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       alwaysWriteToDisk: true,
       template: "./pages/main/index.html",
+      // chunks: ["index"],
     }),
     new HtmlWebpackHarddiskPlugin(),
   ],
@@ -37,6 +38,10 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.(html)$/i,
+        use: ["html-loader"],
       },
     ],
   },

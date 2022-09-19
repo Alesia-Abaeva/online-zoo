@@ -1,4 +1,4 @@
-// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
 @font-face {
   font-family: "Roboto";
   src: url("/assets/fonts/Roboto.ttf");
@@ -11,6 +11,8 @@ $color-active-green: #4b9200;
 $button-hover-orange: #e47209;
 // $button-hover-orange: #e47209;
 $button-hover-orange: #e47209;
+$color-text-grey: #333b41;
+$color-gradient: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 
 %nav-font-style {
   color: white;
@@ -124,7 +126,7 @@ a {
   @extend %orange-gradient;
 }
 
-// ===========section============
+// ===========section wach-online============
 .container__background {
   background-image: url("/assets/image/main/Giant_Panda.jpg");
   // max-height: 700px;
@@ -185,4 +187,160 @@ a {
 }
 .buttons:active {
   background: $color-active-green;
+}
+
+// ===========section backstage============
+
+.backstage__container-flower {
+  background: url("/assets/image/main/flower_foto1.png");
+  width: 100%;
+  // width: 293px;
+
+  height: 605px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  margin-top: 14px;
+} //TODO - маштаб изображения в фоне!
+
+.backstage__content {
+  @extend %display-Flex-center-style;
+  justify-content: center;
+  gap: 87px;
+  padding-top: 126px;
+}
+.backstage__content_img {
+  width: 38%;
+  height: 100%;
+}
+.content_img-bamboo {
+  max-width: 610px;
+  width: 609px;
+  height: 403px;
+  max-height: 403px;
+}
+
+.backstage__content_description {
+  // width: 465px;
+  width: 29%;
+  @extend %nav-font-style;
+  color: $color-text-grey;
+  font-weight: 400;
+  h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+    line-height: 120%;
+    font-weight: 400;
+  }
+  h5 {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 34px;
+    margin-top: 54px;
+    font-weight: 400;
+  }
+  .description__paragraf {
+    line-height: 130%;
+  }
+  p {
+    margin: 0;
+    // font-weight: 400;
+  }
+}
+// ===========section animal============
+.section__animal {
+  margin-top: 101px;
+  margin-bottom: 47px;
+}
+
+.section__container_scroll {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  // justify-content: flex-start;
+  // gap: 30px;
+  width: 75.7%;
+  box-sizing: border-box;
+  // margin: auto;
+  // margin-left: 220px;
+  margin-left: 13%;
+}
+.container_animal {
+  width: 366px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%)
+    border-box;
+  -webkit-mask: linear-gradient(rgba(255, 255, 255, 0) 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin-right: 27px;
+  margin-left: 0px;
+
+  margin-bottom: 20px;
+  transition: 0.5s ease-in;
+}
+
+.container_animal:hover {
+  background: $color-active-green;
+  transform: scale(1.06);
+} //TODO - fix color
+
+.animal_wrapper_description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 8px 12px 14px 16px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.animal_name {
+  @extend %nav-font-style;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  line-height: 120%;
+}
+.animal_geo {
+  @extend %nav-font-style;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #000;
+  margin: 0;
+}
+.animal_foods_banana {
+  width: 33px;
+  height: 37px;
+  background-image: url("/assets/icons/banana-bamboo_icon.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper_pic {
+  // @extend %gradient-borgder-radius;
+
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 366px;
+    border-radius: inherit;
+  }
 }
