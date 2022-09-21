@@ -48,6 +48,11 @@ $color-gradient: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   border: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   padding: 0;
   margin: auto;
@@ -175,17 +180,36 @@ a {
   }
 }
 
+// BUTTONS=============
 .buttons {
   @extend %button-default-orange;
   @extend %nav-font-style;
   text-transform: uppercase;
+  // transition: 2s ease-in-out;
+  cursor: pointer;
 }
 .buttons:hover {
   background: $button-hover-orange;
+  // transition: all 2s ease-in-out;
   // TODO - плавность перехода
-  // transition: 0.5s ease-in;
 }
+
 .buttons:active {
+  background: $color-active-green;
+}
+
+.button_circle {
+  background: $color-gradient;
+  // background: url("/assets/icons/arrow_elips_2.svg");
+  width: 62px;
+  height: 62px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.button_circle:active {
   background: $color-active-green;
 }
 
@@ -266,6 +290,7 @@ a {
   // margin: auto;
   // margin-left: 220px;
   margin-left: 13%;
+  margin-bottom: 60px;
 }
 .container_animal {
   width: 366px;
@@ -285,11 +310,6 @@ a {
   margin-bottom: 20px;
   transition: 0.5s ease-in;
 }
-
-.container_animal:hover {
-  background: $color-active-green;
-  transform: scale(1.06);
-} //TODO - fix color
 
 .animal_wrapper_description {
   display: flex;
@@ -326,14 +346,17 @@ a {
 
 .wrapper_pic {
   // @extend %gradient-borgder-radius;
-
+  background: #000;
   position: relative;
   width: 100%;
   padding-top: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  overflow: hidden;
+  // transition: 0.5s ease-in;
 
   img {
+    opacity: 1;
     position: absolute;
     top: 0;
     left: 0;
@@ -342,5 +365,55 @@ a {
     width: 100%;
     max-width: 366px;
     border-radius: inherit;
+    transition: 0.5s ease-in;
   }
+
+  img:hover {
+    opacity: 0.4;
+    transform: scale(1.1);
+    .animal__description {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.section__wrapper {
+  background-image: url("/assets/image/main/strelitzia_1.png");
+  height: 100%;
+  width: 100%;
+  // width: 293px;
+
+  // height: 605px;
+  background-repeat: no-repeat;
+  // background-size: contain;
+  background-position: bottom right;
+  // background-position: ;
+  // margin-top: 14px;
+}
+
+.section__animal {
+  background-image: url("/assets/image/main/palm_foto.png");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  // background-size: contain;
+  background-position: bottom left;
+}
+
+.container_button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 100px;
+
+  // margin-left: auto;
+}
+
+.scroll_arrow_button {
+  display: flex;
+  display: flex;
+  justify-content: space-around;
+  /* gap: 1198px; */
+  gap: 75%;
 }
