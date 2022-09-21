@@ -9,6 +9,7 @@
 $nav-color: rgb(0, 0, 0);
 $color-active-green: #4b9200;
 $button-hover-orange: #e47209;
+$border-orage-line: #fe9013;
 // $button-hover-orange: #e47209;
 $button-hover-orange: #e47209;
 $color-text-grey: #333b41;
@@ -21,6 +22,12 @@ $color-gradient: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
+}
+%font-style-400 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
 
 %display-Flex-center-style {
@@ -382,14 +389,9 @@ a {
   background-image: url("/assets/image/main/strelitzia_1.png");
   height: 100%;
   width: 100%;
-  // width: 293px;
-
-  // height: 605px;
   background-repeat: no-repeat;
-  // background-size: contain;
   background-position: bottom right;
-  // background-position: ;
-  // margin-top: 14px;
+  position: relative;
 }
 
 .section__animal {
@@ -406,14 +408,158 @@ a {
   justify-content: center;
   width: 100%;
   padding-bottom: 100px;
-
-  // margin-left: auto;
 }
 
 .scroll_arrow_button {
   display: flex;
-  display: flex;
   justify-content: space-around;
   /* gap: 1198px; */
-  gap: 75%;
+  gap: 58%;
+  position: absolute;
+  width: 100%;
+  top: 36.6%;
+}
+
+// ===========section pick-and-feed============
+.section__pick-and-feed {
+  height: 1004px;
+  display: flex;
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 210, 144, 0.7) 30.06%,
+      #febdab 100.95%,
+      rgba(254, 210, 144, 0.7) 106.36%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  opacity: 0.9;
+}
+
+.pick-and-feed__container {
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+  height: 835px;
+  // margin-left: 220px;
+  // margin-left: 14%;
+  // width: 1160px;
+  width: 72.5%;
+  margin: auto;
+  h4 {
+    @extend %font-style-400;
+    font-size: 36px;
+    line-height: 130%;
+    color: $color-text-grey;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.pick-and-feed__header {
+  @extend %font-style-400;
+  font-size: 48px;
+  text-align: center;
+  color: #fe9013;
+  padding-top: 41px;
+  margin-bottom: 30px;
+}
+
+.descriptions__container-pay {
+  color: $color-text-grey;
+  margin-left: 8.5%;
+}
+.pay__header_descriptions {
+  @extend %font-style-400;
+  font-size: 24px;
+  color: $color-text-grey;
+  margin-bottom: 40px;
+}
+.pay__descriptions_bold {
+  @extend %nav-font-style;
+  line-height: 130%;
+  color: $color-text-grey;
+  margin-bottom: 10px;
+}
+.pay__descriptions {
+  @extend %font-style-400;
+  font-size: 16px;
+  line-height: 130%;
+  margin-bottom: 60px;
+  width: 863px;
+
+  a {
+    @extend %font-style-400;
+    color: $color-text-grey;
+    border-bottom: 1px solid $border-orage-line;
+  }
+}
+
+.pick-and-feed__container_payment {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.payment_block {
+  width: 168px;
+  p {
+    @extend %nav-font-style;
+    color: $color-text-grey;
+    font-weight: 400;
+    color: #000000;
+  }
+}
+.payment_block_hover {
+  box-sizing: border-box;
+  width: 168px;
+  height: 168px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%)
+    border-box;
+  -webkit-mask: linear-gradient(rgba(255, 255, 255, 0) 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  box-sizing: content-box;
+  margin-bottom: 30px;
+}
+
+.payment_block__img {
+  display: flex;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  svg {
+    margin: auto;
+  }
+}
+
+.container_button_pay {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.payment_block_arrow {
+  display: flex;
+  height: 168px;
+  align-items: center;
 }
