@@ -2,11 +2,34 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 
+const APP_PAGES = ["main", "donate"];
+
+const generateMultiplePages = (pages) =>
+  pages.map(
+    (name) =>
+      new HtmlWebpackPlugin({
+        alwaysWriteToDisk: true,
+        template: path.join(__dirname, "pages", name, "index.html"),
+        filename: `${name === pages[0] ? "index" : name}.html`,
+        chunks: [`${name}`],
+        // clean: true,
+      })
+  );
+
+const generateMultipleJsEntries = (entries) =>
+  entries.reduce(
+    (resultEntry, entry) => ({
+      ...resultEntry,
+      [entry]: path.join(__dirname, "pages", entry, "script.js"),
+    }),
+    {}
+  );
+
 module.exports = {
-  mode: "development",
   entry: {
-    main: "./pages/main/script.js",
-    // print: "./src/print.js",
+    // main: "./pages/main/script.js",
+    // donate: "./pages/donate/script.js",
+    ...generateMultipleJsEntries(APP_PAGES),
   },
   devtool: "inline-source-map",
   devServer: {
@@ -18,16 +41,12 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.join(__dirname, "dist"),
     clean: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      alwaysWriteToDisk: true,
-      template: "./pages/main/index.html",
-      // chunks: ["index"],
-    }),
     new HtmlWebpackHarddiskPlugin(),
+    ...generateMultiplePages(APP_PAGES),
   ],
   module: {
     rules: [
