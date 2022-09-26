@@ -217,28 +217,24 @@
   color: #fe9013;
 }
 
-.container__another-amount {
+.container__another-amount_form {
   width: 100%;
+}
+
+.container__another-amount {
+  // width: 100%;
+  width: 268px;
+  height: 54px;
   margin: auto;
   display: flex;
   justify-content: center;
 
-  &::after {
-    content: url("/assets/icons/dollar.svg");
+  & span {
     display: block;
     /* margin-left: 12px; */
     position: absolute;
     margin-left: 241px;
     margin-top: 16px;
-  }
-  &:hover::after {
-    content: url("/assets/icons/dollar-green.svg");
-  }
-  &:active::after {
-    content: url("/assets/icons/dollar-green.svg");
-  }
-  &:focus::after {
-    content: url("/assets/icons/dollar-green.svg");
   }
   .another-amount__input {
     padding: 9px;
@@ -252,6 +248,27 @@
     border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
+  }
+
+  &:active {
+    .svg__dollar {
+      fill: $color-active-green;
+    }
+  }
+
+  &:focus-within {
+    .svg__dollar {
+      fill: $color-active-green;
+    }
+  }
+  &:invalid {
+    .svg__dollar {
+      fill: $rad;
+    }
+    .another-amount__input {
+      border: 1px solid $rad;
+      outline: none;
+    }
   }
 }
 

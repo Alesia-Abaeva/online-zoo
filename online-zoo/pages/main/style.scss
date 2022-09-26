@@ -989,6 +989,42 @@ a {
   @include transition_placeholder(all 200ms linear);
 }
 
+.footer__subscribe:focus {
+  .subscribe_input {
+    border: 0.7px solid $color-active-green;
+    outline: none;
+  }
+
+  .button_news {
+    color: $color-active-green;
+    border: 1px solid $color-active-green;
+  }
+}
+
+.footer__subscribe:active {
+  .subscribe_input {
+    border: 0.7px solid $color-active-green;
+    outline: none;
+  }
+
+  .button_news {
+    color: $color-active-green;
+    border: 1px solid $color-active-green;
+  }
+}
+
+.footer__subscribe:invalid {
+  .subscribe_input {
+    border: 0.7px solid $rad;
+    outline: none;
+  }
+
+  .button_news {
+    color: $rad;
+    border: 1px solid $rad;
+  }
+}
+
 .subscribe_input_container {
   display: flex;
   gap: 10px;
@@ -998,15 +1034,19 @@ a {
 .button_news {
   @extend %nav-font-style;
   font-weight: 400;
-  color: $color-active-green;
+  // color: $color-active-green;
+  // border: 1px solid $color-active-green;
+  color: #000000;
+  border: 1px solid $black-blue;
   width: 129px;
   height: 42px;
-  border: 1px solid $color-active-green;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   &:active {
-    color: #000000;
-    border: 1px solid $black-blue;
+    color: $color-active-green;
+    border: 1px solid $color-active-green;
+    // color: #000000;
+    // border: 1px solid $black-blue;
   }
 }
