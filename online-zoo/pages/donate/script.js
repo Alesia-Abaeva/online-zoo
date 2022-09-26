@@ -4,7 +4,7 @@ const header_container = document.querySelector(".header");
 const footer_container = document.querySelector(".footer");
 const header = `
 <div class="header__container">
-            <a href="/index.html">
+            <a href="./index.html">
                 <div class="header__logo">
                     <h1>PetStory online</h1>
                     <div class="logo__icon"></div>
@@ -13,13 +13,13 @@ const header = `
 
             <nav class="header__nav">
                 <ul class="header__menu">
-                    <li class="menu__item"><a class="menu-links links-active" href="/index.html">About</a>
+                    <li class="menu__item"><a class="menu-links links-active" href="./index.html">About</a>
                     </li>
                     <li class="menu__item"><a class="menu-links" href="">Map</a>
                     </li>
                     <li class="menu__item"><a class="menu-links" href="">Zoos</a>
                     </li>
-                    <li class="menu__item"><a class="menu-links" href="/donate.html">Donate</a>
+                    <li class="menu__item"><a class="menu-links" href="./donate.html">Donate</a>
                     </li>
                     <li class="menu__item"><a class="menu-links" href="">Contact us</a></li>
                 </ul>
@@ -39,7 +39,7 @@ const footer = `
 <div class="footer__container">
 <div class="footer__container_left">
     <div class="footer_icon">
-        <a href="/index.html">
+        <a href="./index.html">
             <div class="header__logo">
                 <h1>PetStory online</h1>
                 <div class="logo__icon"></div>
@@ -49,7 +49,7 @@ const footer = `
 
     <div class="footer__button">
         <form>
-            <button type="submit" formaction="/donate.html" class="buttons square-buttons">donate for volunteers</button>
+            <button type="submit" formaction="./donate.html" class="buttons square-buttons">donate for volunteers</button>
         </form>
     </div>
 
@@ -120,7 +120,7 @@ const footer = `
 
     <div class="footer__navigation_container">
         <ul class="footer__menu">
-            <li class="menu__item"><a class="menu-links links-active" href="/index.html">About</a>
+            <li class="menu__item"><a class="menu-links links-active" href="./index.html">About</a>
             </li>
             <li class="menu__item"><a class="menu-links" href="">Map</a>
             </li>
