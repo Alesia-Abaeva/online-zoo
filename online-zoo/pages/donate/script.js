@@ -40,9 +40,9 @@ const footer = `
 <div class="footer__container_left">
     <div class="footer_icon">
         <a href="./index.html">
-            <div class="header__logo">
+            <div class="header__logo footer__logo">
                 <h1>PetStory online</h1>
-                <div class="logo__icon"></div>
+                <div class="logo__icon logo_icon_footer"></div>
             </div>
         </a>
     </div>
@@ -126,7 +126,6 @@ const footer = `
             </li>
             <li class="menu__item"><a class="menu-links" href="">Zoos</a>
             </li>
-            <!-- TODO- настроить ссылку на страницу DONATE -->
             <li class="menu__item"><a class="menu-links" href="">Contact us</a></li>
         </ul>
     </div>
@@ -206,5 +205,5 @@ function amountPrice(activeAmound = 0) {
   }
 }
 
-amountPrice(2);
+amountPrice(4);
 // .paragraf_active

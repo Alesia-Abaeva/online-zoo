@@ -1,0 +1,102 @@
+/*--------------------------------------------------------------
+1.0 - HEADER
+--------------------------------------------------------------*/
+
+.header {
+  height: 80px;
+  background-color: $nav-color;
+  @extend %nav-font-style;
+
+  @media (max-width: 320px) {
+    height: 34px;
+  }
+}
+.header__container {
+  max-width: $desktop; //**
+  margin: auto; //**
+  @extend %display-Flex-center-style;
+  justify-content: center;
+  height: 80px;
+  gap: 63px;
+
+  @media (max-width: 320px) {
+    max-width: $mobile;
+    height: 34px;
+  }
+}
+
+.header__logo {
+  @extend %display-Flex-center-style;
+  width: 80px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  position: relative;
+  .logo__icon {
+    background-image: url("/assets/icons/bamboo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 17px;
+    position: absolute;
+    left: 10px;
+    top: 24px;
+  }
+  h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 19px;
+  }
+
+  @media (max-width: $mobile) {
+    @include wigth_height(47px, 30px);
+    border: none;
+    .logo__icon {
+      @include wigth_height(10px, 14px);
+      left: 3px;
+      top: 12px;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 12.2px;
+      line-height: 120%;
+    }
+  }
+}
+
+.header__menu {
+  @extend %display-Flex-center-style;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 58px;
+  margin-right: 375px;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+  //   TODO - сделать бургер меню!!!!
+}
+
+a {
+  @extend %nav-font-style;
+  text-decoration: none;
+}
+
+.header__designed {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.menu-links:hover {
+  @extend %orange-gradient;
+  transition: all 0.2s;
+}
+
+.menu-links:active {
+  @extend %none-gradient;
+}
+
+.links-active {
+  @extend %orange-gradient;
+}

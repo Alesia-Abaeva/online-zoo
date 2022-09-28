@@ -1,4 +1,9 @@
 // Mixins
+@mixin wigth_height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 @mixin transition_placeholder($property) {
   -webkit-transition: $property;
   transition: $property;
@@ -10,7 +15,7 @@
 }
 
 @mixin font-input($property) {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 140%;
@@ -18,7 +23,23 @@
   color: $property;
 }
 
+@mixin fonts-size-heigth-weigth-color($size, $heigth, $weigth, $color) {
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: $size;
+  line-height: $heigth;
+  font-weight: $weigth;
+  color: $color;
+}
+
+// Size
+$mobile: 320px;
+$tablet: 640px;
+$small_desktop: 100px;
+$desktop: 1600px;
+
 // Colors
+$white: #fff;
 $rad: #d31414;
 $gray: #929699;
 $black-blue: #333b41;
@@ -104,4 +125,43 @@ $meat_icon: url("/assets/icons/food_icon/meet-fish_icon\ \(1\).svg");
   font-size: 16px;
   line-height: 130%;
   color: #ffffff;
+}
+
+%display-Flex-center-style {
+  display: flex;
+  align-items: center;
+}
+
+%orange-gradient {
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%none-gradient {
+  background: #4b9200;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%button-default-orange {
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 25px;
+  border: none;
+}
+
+%placeholder {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+
+  font-size: 16px;
+  line-height: 140%;
+  // @extend %nav-font-style;
+  font-weight: 400;
+  color: $gray;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
