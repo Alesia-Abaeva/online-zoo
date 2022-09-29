@@ -33,9 +33,11 @@
 }
 
 // Size
-$mobile: 320px;
-$tablet: 640px;
-$small_desktop: 100px;
+$max-mobile: 451px;
+$mobile: 320px; //
+$min-tablet: 450px;
+$tablet: 640px; // 640 - 450 сделать границу такую
+$small_desktop: 1000px;
 $desktop: 1600px;
 
 // Colors

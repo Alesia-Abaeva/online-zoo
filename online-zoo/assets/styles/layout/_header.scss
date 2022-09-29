@@ -23,6 +23,10 @@
     max-width: $mobile;
     height: 34px;
   }
+  @media (max-width: $tablet) {
+    max-width: $tablet;
+    // height: 34px;
+  }
 }
 
 .header__logo {
@@ -72,6 +76,9 @@
   gap: 58px;
   margin-right: 375px;
   @media (max-width: $mobile) {
+    display: none;
+  }
+  @media (max-width: $tablet) {
     display: none;
   }
   //   TODO - сделать бургер меню!!!!

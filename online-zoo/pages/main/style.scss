@@ -34,7 +34,7 @@ body {
   height: 780px;
   background-repeat: no-repeat;
   background-size: cover;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     height: 221px;
     background-image: url("/assets/image/main/background/Giant_Panda_320.jpg");
     background-size: contain;
@@ -46,13 +46,13 @@ body {
   background-image: url("/assets/image/donate/panda_bg.png");
   height: 386px;
   background-position: center;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     height: 187px;
     background-image: url("/assets/image/donate/mob_background/panda_bg_320.png");
     background-size: contain;
     background-position: bottom;
   }
-  @media (max-width: $tablet) {
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
     height: 335px;
     background-image: url("/assets/image/donate/tablet_background/panda_bg_640.jpg");
     // background-image: url("/assets/image/donate/mob_background/panda_bg_320.png");
@@ -66,7 +66,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-left: 30%;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
     margin-left: 39%;
   }
@@ -78,7 +78,7 @@ body {
   border-radius: 50%;
   position: relative;
   margin-top: 12px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
     @include wigth_height(119px, 119px);
     margin-top: 21px;
@@ -107,7 +107,7 @@ body {
     color: #ffee2e;
   }
 
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-top: 20px;
     height: 550px;
     // width: 100%;
@@ -131,7 +131,7 @@ body {
   // background-size: contain;
   background-position: right;
   margin-top: 14px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     background: url("/assets/image/main/background/flower_foto_320.png");
     background-repeat: no-repeat;
     background-position: top right;
@@ -147,7 +147,7 @@ body {
   justify-content: center;
   gap: 87px;
   padding-top: 126px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
     width: 100%;
     gap: 0px;
@@ -157,7 +157,7 @@ body {
 .backstage__content_img {
   width: 38%;
   height: 100%;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
 }
@@ -196,7 +196,7 @@ body {
     // font-weight: 400;
   }
 
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 93%;
     h3 {
       @include fonts-size-heigth-weigth-color(24px, 120%, 400, $black-blue);
@@ -215,7 +215,7 @@ body {
 --------------------------------------------------------------*/
 .section__animal {
   margin-top: 101px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-top: 37px;
   }
 }
@@ -232,7 +232,7 @@ body {
   #alligators {
     display: none;
   }
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 97.7%;
     margin-left: 3%;
     margin-bottom: -1px;
@@ -278,7 +278,7 @@ body {
   padding: 8px 12px 14px 16px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     padding: 7px 8px 3px 12px; //TODO - проверить!!!!
     line-height: 140%;
   }
@@ -290,7 +290,7 @@ body {
   color: #000000;
   margin: 0;
   line-height: 120%;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     line-height: 140%;
     font-size: 13px;
     margin-bottom: -2px;
@@ -304,7 +304,7 @@ body {
   line-height: 120%;
   color: #000;
   margin: 0;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     font-size: 12px;
     margin-bottom: 6px;
   }
@@ -314,7 +314,7 @@ body {
   height: 37px;
   background-repeat: no-repeat;
   background-size: cover;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 26px;
     height: 29px;
     margin-bottom: 3px;
@@ -328,7 +328,7 @@ body {
 .meat {
   @include wigth_height(48px, 38px);
   background-image: $meat_icon;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     @include wigth_height(37px, 27px);
     margin-bottom: 7px;
     margin-right: -3px;
@@ -414,7 +414,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   position: relative;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     background-image: url("/assets/image/main/background/strelitzia_320px.png");
   }
 }
@@ -424,7 +424,7 @@ body {
   @include wigth_height(100%, 100%);
   background-repeat: no-repeat;
   background-position: bottom left;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     background-image: url("/assets/image/main/background/palm_foto_320.png");
   }
 }
@@ -434,7 +434,7 @@ body {
   justify-content: center;
   width: 100%;
   padding-bottom: 100px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     padding-bottom: 60px;
   }
 }
@@ -446,7 +446,7 @@ body {
   position: absolute;
   width: 100%;
   top: 36.6%;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
 }
@@ -458,7 +458,7 @@ body {
   height: 1004px;
   background: $orange_grad;
   opacity: 0.9;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     height: auto;
   }
 }
@@ -468,7 +468,7 @@ body {
   margin: auto;
   display: flex;
   height: 100%;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
   }
 }
@@ -489,7 +489,7 @@ body {
     text-align: center;
     margin-bottom: 40px;
   }
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 92.5%;
     margin-left: auto;
     margin-right: auto;
@@ -512,7 +512,7 @@ body {
   color: #fe9013;
   padding-top: 41px;
   margin-bottom: 30px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     font-size: 24px;
     padding-top: 22px;
     margin-bottom: 10px;
@@ -522,7 +522,7 @@ body {
 .descriptions__container-pay {
   color: $black-blue;
   margin-left: 8.5%;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-left: -0.5%;
     text-align: center;
   }
@@ -533,7 +533,7 @@ body {
   font-size: 24px;
   color: $black-blue;
   margin-bottom: 40px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     font-size: 18px;
   }
 }
@@ -542,7 +542,7 @@ body {
   line-height: 130%;
   color: $black-blue;
   margin-bottom: 10px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
 }
@@ -559,7 +559,7 @@ body {
     border-bottom: 1px solid $border-orage-line;
   }
 
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
 }
@@ -569,7 +569,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 30px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -603,7 +603,7 @@ body {
   mask-composite: exclude;
   box-sizing: content-box;
   margin-bottom: 30px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-bottom: 8px;
   }
 }
@@ -625,7 +625,7 @@ body {
   width: 100%;
   margin-top: 60px;
   margin-left: 2px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-top: 39px;
     margin-left: auto;
     padding-bottom: 41px;
@@ -649,7 +649,7 @@ body {
   }
 }
 .botton_arrow {
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     top: 376px;
   }
 }
@@ -665,7 +665,7 @@ body {
   background-position: bottom right;
   background-size: auto;
   padding-bottom: 182px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     padding-bottom: 60px;
     background-image: url("/assets/image/main/background/leav_foto_320.png");
   }
@@ -676,7 +676,7 @@ body {
   margin: auto; //**
   height: 100%;
   // width: 100%;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
   }
 }
@@ -688,7 +688,7 @@ body {
   #feedback-4 {
     display: none;
   }
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     flex-direction: column;
     gap: 15px;
     #feedback-1 {
@@ -709,7 +709,7 @@ body {
   text-align: center;
   margin-top: 140px;
   margin-bottom: 45px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     font-size: 24px;
     line-height: 120%;
     margin-top: 29px;
@@ -729,7 +729,7 @@ body {
   mask-composite: exclude;
   box-sizing: content-box;
 
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     @include wigth_height(296px, 105px);
     margin: auto;
   }
@@ -751,7 +751,7 @@ body {
   width: 83%;
   justify-content: center;
   padding-top: 15px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     justify-content: flex-start;
     gap: 6px;
     padding-top: 10px;
@@ -786,14 +786,14 @@ body {
     @extend %font-style-300;
     color: #767474;
   }
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     height: 35%;
   }
 }
 .container__button_feedback {
   margin: auto;
   width: 72.5%;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: flex;
     width: 74.5%;
     justify-content: center;
@@ -811,7 +811,7 @@ body {
   width: 599px;
   height: 8px;
   margin-bottom: 20px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
 }
