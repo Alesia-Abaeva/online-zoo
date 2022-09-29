@@ -14,6 +14,11 @@
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     height: 34px;
   }
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 100%;
+    z-index: 9999;
+    position: relative;
+  }
 }
 .header__container {
   max-width: $desktop; //**
@@ -30,6 +35,9 @@
   @media (max-width: $tablet) {
     max-width: $tablet;
     // height: 34px;
+  }
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    max-width: $min-small_desktop;
   }
 }
 
@@ -86,6 +94,11 @@
     display: none;
   }
   //   TODO - сделать бургер меню!!!!
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-right: 198px; // TODO - @debug
+    gap: 48px;
+  }
 }
 
 a {

@@ -22,7 +22,6 @@ html {
 body {
   padding: 0;
   margin: auto;
-  // max-width: 1600px; !!
 }
 
 /*--------------------------------------------------------------
@@ -45,6 +44,11 @@ body {
     height: 373px;
     background-position: bottom;
   }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    height: 584px;
+    background-position: bottom;
+  }
 }
 
 .donate_background {
@@ -60,7 +64,6 @@ body {
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     height: 335px;
     background-image: url("/assets/image/donate/tablet_background/panda_bg_640.jpg");
-    // background-image: url("/assets/image/donate/mob_background/panda_bg_320.png");
     background-size: cover;
     background-position: bottom;
   }
@@ -80,6 +83,10 @@ body {
     max-width: $tablet;
     margin-left: 41%;
   }
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    max-width: $max-small_desktop;
+    margin-left: 28%;
+  }
 }
 
 .watch__container-circle {
@@ -97,6 +104,11 @@ body {
     max-width: $tablet;
     @include wigth_height(238px, 238px);
   }
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    max-width: $small_desktop;
+    @include wigth_height(367px, 367px);
+    margin-top: -10px;
+  }
 }
 
 .watch__descriprions {
@@ -110,6 +122,10 @@ body {
     left: 18%;
     height: auto;
   }
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-top: 54px;
+    height: auto;
+  }
 
   p {
     @include fonts-size-heigth-weigth-color(106px, 75%, 500, $white);
@@ -117,9 +133,14 @@ body {
     margin-bottom: 62px;
     text-align: center;
     text-transform: uppercase;
+    // ---tablet
     @media (min-width: $min-tablet) and (max-width: $tablet) {
       font-size: 54px;
-      // line-height: 75%;
+    }
+    // ---small_desktop
+    @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+      font-size: 85px;
+      margin-bottom: 40px;
     }
   }
 
@@ -130,11 +151,9 @@ body {
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-top: 20px;
     height: 550px;
-    // width: 100%;
     max-width: $mobile;
     @include wigth_height(119px, 119px);
     p {
-      // @extend %nav-font-style;
       font-size: 28px;
     }
   }
@@ -151,6 +170,7 @@ body {
   // background-size: contain;
   background-position: right;
   margin-top: 14px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     background: url("/assets/image/main/background/flower_foto_320.png");
     background-repeat: no-repeat;
@@ -158,6 +178,7 @@ body {
     margin-top: 39px;
     height: auto;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     margin-top: -2px;
     height: 476px;
@@ -165,6 +186,11 @@ body {
     background: url("/assets/image/main/background/640px/flower_foto_640.png");
     background-position: top right;
     background-repeat: no-repeat;
+  }
+
+  // ---small_desktop
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    background: none;
   }
 }
 
@@ -175,33 +201,56 @@ body {
   justify-content: center;
   gap: 87px;
   padding-top: 126px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
     width: 100%;
     gap: 0px;
     padding-top: 66px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     max-width: $tablet;
     padding-top: 63px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    gap: 31px;
+    padding-top: 95px;
   }
 }
 .backstage__content_img {
   width: 38%;
   height: 100%;
+  @include wigth_height(609px, 403px);
+  background: url("/assets/image/main/bamboo-cap.jpg");
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     display: none;
   }
+
+  // ---small_desktop
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    @include wigth_height(455px, 408px);
+    background-position: center;
+  }
 }
-.content_img-bamboo {
-  max-width: 610px;
-  width: 609px;
-  height: 403px;
-  max-height: 403px;
-}
+
+// .content_img-bamboo {
+//   max-width: 610px;
+//   @include wigth_height(609px, 403px);
+//   max-height: 403px;
+//   background: url("/assets/image/main/bamboo-cap.jpg");
+
+//   // ---small_desktop
+//   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+//     @include wigth_height(455px, 408px);
+//   }
+// }
 
 .backstage__content_description {
   // width: 465px;
@@ -209,9 +258,15 @@ body {
   @extend %nav-font-style;
   color: $black-blue;
   font-weight: 400;
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     width: 93%;
     margin-bottom: 10px;
+  }
+
+  // ---small_desktop
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 45.5%;
   }
   h3 {
     margin: 0;
@@ -219,6 +274,10 @@ body {
     font-size: 48px;
     line-height: 120%;
     font-weight: 400;
+
+    @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+      margin-bottom: 23px;
+    }
   }
   h5 {
     font-size: 24px;
@@ -243,6 +302,10 @@ body {
     @media (min-width: $min-tablet) and (max-width: $tablet) {
       width: 81%;
     }
+
+    // @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    //   width: 81%;
+    // }
   }
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
@@ -259,16 +322,28 @@ body {
   }
 }
 
+.description__paragraf_second {
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 98%;
+  }
+}
+
 /*--------------------------------------------------------------
 3 - SECTION. ANIMAL
 --------------------------------------------------------------*/
 .section__animal {
   margin-top: 101px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-top: 37px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     margin-top: 34px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-top: 60px;
   }
 }
 
@@ -281,9 +356,11 @@ body {
   box-sizing: border-box;
   margin-left: 13%;
   margin-bottom: 60px;
+
   #alligators {
     display: none;
   }
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 97.7%;
     margin-left: 3%;
@@ -323,7 +400,15 @@ body {
       display: block;
     }
   }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 100%;
+    margin-left: 0px;
+    gap: 29px;
+    margin-bottom: 17px;
+  }
 }
+
 .container_animal {
   width: 366px;
   border-radius: 5px;
@@ -336,16 +421,18 @@ body {
   mask-composite: exclude;
   box-sizing: content-box;
   cursor: pointer;
-  // margin-right: 27px; //@debug
   margin-left: 0px;
-
   margin-bottom: 20px;
   transition: 0.5s ease-in;
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     width: 285px;
-    // margin-bottom: 92px;
     margin-bottom: 63px; //@debug
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 293px;
+    margin-bottom: 63px;
   }
 }
 
@@ -422,11 +509,13 @@ body {
 .meat {
   @include wigth_height(48px, 38px);
   background-image: $meat_icon;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     @include wigth_height(37px, 27px);
     margin-bottom: 7px;
     margin-right: -3px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     @include wigth_height(37px, 27px);
     margin-right: -2px;
@@ -512,11 +601,17 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   position: relative;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     background-image: url("/assets/image/main/background/strelitzia_320px.png");
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     background-image: url("/assets/image/main/background/640px/strelitzia_640.png");
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    background-image: url("/assets/image/main/background/1000px/strelitzia_1000.png");
   }
 }
 
@@ -525,11 +620,17 @@ body {
   @include wigth_height(100%, 100%);
   background-repeat: no-repeat;
   background-position: bottom left;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     background-image: url("/assets/image/main/background/palm_foto_320.png");
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     background-image: url("/assets/image/main/background/640px/palm_foto_640.png");
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    background-image: url("/assets/image/main/background/1000px/palm_foto_1000.png");
   }
 }
 
@@ -538,12 +639,17 @@ body {
   justify-content: center;
   width: 100%;
   padding-bottom: 100px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     padding-bottom: 60px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
-    // margin-top: -33px;
-    margin-top: -3px; //@debug
+    margin-top: -3px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    padding-bottom: 140px;
   }
 }
 
@@ -554,15 +660,21 @@ body {
   position: absolute;
   width: 100%;
   top: 36.6%;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     justify-content: center;
     gap: 5%;
     top: 35.3%;
-    // top: 34.3%; //@debug
-    // top: 36.5%; //@debug
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    justify-content: center;
+    gap: 17%;
+    top: 34.4%;
   }
 }
 
@@ -577,6 +689,9 @@ body {
     height: auto;
   }
   @media (min-width: $min-tablet) and (max-width: $tablet) {
+    height: auto;
+  }
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     height: auto;
   }
 }
@@ -602,12 +717,21 @@ body {
   width: 72.5%;
   margin: auto;
   margin-bottom: 99px;
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     width: 100%;
     margin-top: 20px;
     height: auto;
     margin-bottom: 21px;
   }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 94%;
+    margin-top: 29px;
+    height: auto;
+    margin-bottom: 51px;
+  }
+
   h4 {
     @extend %font-style-400;
     font-size: 36px;
@@ -642,15 +766,22 @@ body {
   color: #fe9013;
   padding-top: 41px;
   margin-bottom: 30px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     font-size: 24px;
     padding-top: 22px;
     margin-bottom: 10px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     font-size: 42px;
     padding-top: 9px;
     margin-bottom: 21px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    padding-top: 32px;
+    margin-bottom: 20px;
   }
 }
 
@@ -665,6 +796,10 @@ body {
     margin-left: 3%;
     width: 96%;
   }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-left: 5%;
+  }
 }
 
 .pay__header_descriptions {
@@ -672,37 +807,56 @@ body {
   font-size: 24px;
   color: $black-blue;
   margin-bottom: 40px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     font-size: 18px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     font-size: 22px;
     margin-bottom: 20px;
   }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-bottom: 21px;
+  }
 }
+
 .pay__descriptions_bold {
   @extend %nav-font-style;
   line-height: 130%;
   color: $black-blue;
   margin-bottom: 10px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     margin-bottom: 9px;
   }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 90%;
+  }
 }
+
 .pay__descriptions {
   @extend %font-style-400;
   font-size: 16px;
   line-height: 130%;
   margin-bottom: 60px;
-  width: 863px;
+  width: 863px; // TODO поменять на %!!!!!!
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     width: 100%;
     margin-bottom: 31px;
   }
-  // TODO поменять на %!!!!!!
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 90%;
+    margin-bottom: 40px;
+  }
 
   a {
     @extend %font-style-400;
@@ -748,7 +902,12 @@ body {
 
 .payment_block:last-child {
   margin-top: -12px;
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     margin-top: 0;
   }
 }
@@ -769,9 +928,6 @@ body {
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-bottom: 8px;
   }
-  @media (min-width: $min-tablet) and (max-width: $tablet) {
-    // margin-bottom: 29px;
-  }
 }
 
 .payment_block__img {
@@ -791,6 +947,7 @@ body {
   width: 100%;
   margin-top: 60px;
   margin-left: 2px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-top: 39px;
     margin-left: auto;
@@ -801,6 +958,12 @@ body {
     margin-top: 41px;
     margin-left: 0px;
     margin-bottom: 59px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-top: 71px;
+    margin-left: 0px;
+    padding-bottom: 50px;
   }
 }
 // botton_arrow
