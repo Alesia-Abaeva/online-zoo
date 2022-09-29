@@ -38,9 +38,12 @@ $mobile: 320px; //
 $min-tablet: 450px;
 $tablet: 640px; // 640 - 450 сделать границу такую
 $small_desktop: 1000px;
-$desktop: 1600px;
+$max-small_desktop: 1100px;
+$min-small_desktop: 1000px;
+$desktop: 1600px; //  до 1100 - нет горизонтальной прокрутки
 
 // Colors
+$orange: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 $white: #fff;
 $rad: #d31414;
 $gray: #929699;

@@ -7,7 +7,11 @@
   background-color: $nav-color;
   @extend %nav-font-style;
 
-  @media (max-width: 320px) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    height: 34px;
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
     height: 34px;
   }
 }

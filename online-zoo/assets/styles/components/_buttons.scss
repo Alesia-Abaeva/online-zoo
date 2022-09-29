@@ -9,9 +9,14 @@
   transition: background 0.5s ease-in-out;
 }
 .buttons__watch {
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     position: absolute;
     right: -6px;
+  }
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    position: absolute;
+    right: 123%;
+    top: 74%;
   }
 }
 .buttons:hover {
