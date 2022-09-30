@@ -59,11 +59,16 @@ body {
   height: 386px;
   background-position: center;
 
-  @media (min-width: $mobile) and (max-width: $max-mobile) {
+  @media (min-width: $mobile) and (max-width: 321px) {
     height: 187px;
     background-image: url("/assets/image/donate/mob_background/panda_bg_320.png");
     background-size: contain;
     background-position: bottom;
+  }
+
+  @media (min-width: 322px) and (max-width: 451px) {
+    height: 187px;
+    background-size: cover;
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
@@ -71,6 +76,12 @@ body {
     background-image: url("/assets/image/donate/tablet_background/panda_bg_640.jpg");
     background-size: cover;
     background-position: bottom;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    height: 390px;
+    background-image: url("/assets/image/donate/small_desctop_background/panda_bg_1000.png");
+    // background-position: bottom;
   }
 }
 

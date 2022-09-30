@@ -20,24 +20,42 @@
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     padding-bottom: 21px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     padding-bottom: 46px;
   }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    padding-bottom: 29px;
+  }
 }
+
 .pick-and-feed__container_donate {
   height: auto;
   margin-bottom: 0;
   width: 93.5%;
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 94%;
+  }
 }
 
 .pick-and-feed__information {
   width: 72.5%;
   margin: 0 auto;
 
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 94.5%;
+  }
+
   h3 {
     @include fonts-size-heigth-weigth-color(36px, 130%, 400, $white);
     padding-top: 40px;
     margin-bottom: 10px;
+
+    @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+      width: 89%;
+      margin-bottom: 28px;
+    }
   }
   p {
     @include fonts-size-heigth-weigth-color(16px, 140%, 400, $white);
@@ -53,6 +71,10 @@
       $border-orage-line
     );
     margin-bottom: 60px;
+
+    @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+      margin-bottom: 40px;
+    }
   }
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
@@ -98,21 +120,30 @@
 .pick-and-feed__header_donation {
   margin-right: 10px;
   margin-bottom: 21px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-right: 2px;
     padding-top: 20px;
     margin-bottom: 9px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     margin-right: 2px;
     padding-top: 31px;
     margin-bottom: 22px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-right: 19px;
+    padding-top: 21px;
+    margin-bottom: 11px;
   }
 }
 
 .descriptions__container-pay_donate {
   color: $black-blue;
   margin-left: 8%;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-left: 0;
     margin-bottom: 11px;
@@ -121,6 +152,10 @@
     text-align: center;
     margin-left: 0;
     margin-bottom: 11px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-left: 4.8%;
   }
 }
 
@@ -151,6 +186,14 @@
     margin-bottom: 40px;
     margin-top: 50px;
     justify-content: center;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    justify-content: center;
+    margin-bottom: 47px;
+    margin-right: 19px;
+    margin-top: 61px;
+    margin-left: 0px;
   }
 }
 
@@ -253,6 +296,10 @@
   margin-bottom: 17px;
   padding-left: 7px;
 
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 87%;
+  }
+
   p {
     @extend %nav-font-style;
     font-weight: 400;
@@ -282,8 +329,13 @@
   border-radius: 2px;
   height: 27px;
   margin-bottom: 98px;
+
   @media (max-width: $tablet) {
     width: 100%;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 86.1%;
   }
 
   .wrapper_range {
@@ -302,6 +354,13 @@
         display: none;
       }
       #price_1000 {
+        display: none;
+      }
+    }
+
+    @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+      width: 97.4%;
+      #price_5000 {
         display: none;
       }
     }
@@ -387,14 +446,21 @@
   text-transform: uppercase;
   color: #333b41;
   transition: all 0.5s ease-in-out;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     font-size: 13px;
     left: -9px;
     top: 14px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     top: 27px;
     left: -20px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    top: 27px;
+    left: -14px;
   }
 }
 
@@ -429,6 +495,11 @@
       margin-left: 153px;
       margin-top: 12px;
     }
+
+    @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+      margin-left: 236px;
+      margin-top: 16px;
+    }
   }
   .another-amount__input {
     padding: 9px;
@@ -442,16 +513,22 @@
     border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
+
     @media (min-width: $mobile) and (max-width: $max-mobile) {
       width: 164px;
       height: 28px;
       padding: 6px;
       // padding-left: 9px;
     }
+
     @media (min-width: $min-tablet) and (max-width: $tablet) {
       width: 165px;
       height: 23px;
       padding: 8px;
+    }
+
+    @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+      height: 34px;
     }
   }
 
@@ -587,10 +664,16 @@
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-left: 8px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     margin-left: 8px;
   }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-left: 7px;
+  }
 }
+
 .once {
   width: 65px;
   padding-left: 24px;
@@ -630,13 +713,19 @@
   font-size: 16px;
   display: flex;
   justify-content: center;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     padding-bottom: 21px;
     margin-left: 0;
     width: 101%;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     padding-bottom: 32px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    padding-bottom: 48px;
   }
 }
 
