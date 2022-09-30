@@ -32,6 +32,18 @@
   color: $color;
 }
 
+@mixin burger-menu-span {
+  // content: "";
+  width: 100%;
+  height: 2px;
+  margin: 0 auto;
+  background: $white;
+  border-radius: 2px;
+  position: absolute;
+  // top: 6px;
+  z-index: 10;
+}
+
 // Size
 $max-mobile: 451px;
 $mobile: 320px; //

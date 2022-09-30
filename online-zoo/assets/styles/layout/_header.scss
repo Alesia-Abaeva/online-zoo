@@ -7,13 +7,10 @@
   background-color: $nav-color;
   @extend %nav-font-style;
 
-  @media (min-width: $mobile) and (max-width: $max-mobile) {
+  @media (min-width: $mobile) and (max-width: $tablet) {
     height: 34px;
   }
 
-  @media (min-width: $min-tablet) and (max-width: $tablet) {
-    height: 34px;
-  }
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     width: 100%;
     z-index: 9999;
@@ -31,11 +28,15 @@
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
     height: 34px;
+    gap: 36.8%;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     max-width: $tablet;
-    // height: 34px;
+    height: 34px;
+    gap: 41.8%;
   }
+
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     max-width: $max-small_desktop;
   }
@@ -64,7 +65,7 @@
     font-size: 19px;
   }
 
-  @media (min-width: $mobile) and (max-width: $max-mobile) {
+  @media (min-width: $mobile) and (max-width: $tablet) {
     @include wigth_height(47px, 30px);
     border: none;
     .logo__icon {
@@ -77,6 +78,10 @@
       font-size: 12.2px;
       line-height: 120%;
     }
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    margin-top: 2px;
   }
 }
 
@@ -115,6 +120,10 @@ a {
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    display: none;
+  }
 }
 
 .menu-links:hover {
@@ -129,3 +138,37 @@ a {
 .links-active {
   @extend %orange-gradient;
 }
+
+// burger-menu
+
+.header__burger {
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    @include wigth_height(18px, 10px);
+    position: relative;
+    display: block;
+
+    &::after {
+      content: "";
+      @include burger-menu-span;
+      bottom: 8px;
+    }
+
+    &::before {
+      content: "";
+      @include burger-menu-span;
+      top: 4px;
+    }
+
+    span {
+      @include burger-menu-span;
+      top: 8px;
+    }
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    margin-bottom: 3px;
+    margin-right: 2px;
+  }
+}
+
+//

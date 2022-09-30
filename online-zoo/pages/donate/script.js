@@ -24,6 +24,9 @@ const header = `
                     <li class="menu__item"><a class="menu-links" href="">Contact us</a></li>
                 </ul>
             </nav>
+            <div class="header__burger">
+                <span></span>
+            </div>
 
             <div class="header__designed">
                 <a class="menu-links" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
