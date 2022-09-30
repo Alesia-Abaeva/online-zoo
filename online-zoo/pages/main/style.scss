@@ -33,11 +33,14 @@ body {
   height: 780px;
   background-repeat: no-repeat;
   background-size: cover;
-  @media (min-width: $mobile) and (max-width: $max-mobile) {
+  @media (min-width: $mobile) and (max-width: 370px) {
     height: 221px;
     background-image: url("/assets/image/main/background/Giant_Panda_320.jpg");
     background-size: contain;
     background-position: bottom;
+  }
+  @media (min-width: 371px) and (max-width: 451px) {
+    height: 221px;
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
@@ -55,12 +58,14 @@ body {
   background-image: url("/assets/image/donate/panda_bg.png");
   height: 386px;
   background-position: center;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     height: 187px;
     background-image: url("/assets/image/donate/mob_background/panda_bg_320.png");
     background-size: contain;
     background-position: bottom;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     height: 335px;
     background-image: url("/assets/image/donate/tablet_background/panda_bg_640.jpg");
@@ -68,6 +73,7 @@ body {
     background-position: bottom;
   }
 }
+
 .section__wach-online {
   max-width: $desktop; //**
   display: flex;
@@ -83,6 +89,7 @@ body {
     max-width: $tablet;
     margin-left: 41%;
   }
+
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     max-width: $max-small_desktop;
     margin-left: 28%;
@@ -133,8 +140,13 @@ body {
     margin-bottom: 62px;
     text-align: center;
     text-transform: uppercase;
+
+    @media (min-width: $min-tablet) and (max-width: $min-tablet_for_section_watch-online) {
+      font-size: 45px;
+    }
+
     // ---tablet
-    @media (min-width: $min-tablet) and (max-width: $tablet) {
+    @media (min-width: $min-tablet_for_section_watch-online) and (max-width: $tablet) {
       font-size: 54px;
     }
     // ---small_desktop
@@ -363,7 +375,7 @@ body {
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 97.7%;
-    margin-left: 3%;
+    margin-left: -1%; //TODO - проверить отступы!
     margin-bottom: -1px;
 
     #sloth {
@@ -425,6 +437,10 @@ body {
   margin-bottom: 20px;
   transition: 0.5s ease-in;
 
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    width: 285px;
+  }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     width: 285px;
     margin-bottom: 63px; //@debug
@@ -459,15 +475,15 @@ body {
   color: #000000;
   margin: 0;
   line-height: 120%;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     line-height: 140%;
     font-size: 13px;
     margin-bottom: -2px;
-    // width: 220px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     font-size: 13px;
-    // line-height: 140%;
   }
 }
 .animal_geo {
@@ -477,26 +493,26 @@ body {
   line-height: 120%;
   color: #000;
   margin: 0;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     font-size: 12px;
     margin-bottom: 6px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     font-size: 12px;
   }
 }
 .animal_foods {
   @include wigth_height(33px, 37px);
-  // width: 33px;
-  // height: 37px;
   background-repeat: no-repeat;
   background-size: cover;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     @include wigth_height(26px, 29px);
-    // width: 26px;
-    // height: 29px;
     margin-bottom: 3px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     @include wigth_height(26px, 29px);
   }
@@ -685,12 +701,15 @@ body {
   height: 1004px;
   background: $orange_grad;
   opacity: 0.9;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     height: auto;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     height: auto;
   }
+
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     height: auto;
   }
@@ -701,9 +720,11 @@ body {
   margin: auto;
   display: flex;
   height: 100%;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     max-width: $tablet;
   }
@@ -739,10 +760,12 @@ body {
     color: $black-blue;
     text-align: center;
     margin-bottom: 40px;
+
     @media (min-width: $min-tablet) and (max-width: $tablet) {
       margin-bottom: 19px;
     }
   }
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 92.5%;
     margin-left: auto;
@@ -788,10 +811,12 @@ body {
 .descriptions__container-pay {
   color: $black-blue;
   margin-left: 8.5%;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-left: -0.5%;
     text-align: center;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     margin-left: 3%;
     width: 96%;
@@ -846,7 +871,7 @@ body {
   font-size: 16px;
   line-height: 130%;
   margin-bottom: 60px;
-  width: 863px; // TODO поменять на %!!!!!!
+  width: 80%;
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     width: 100%;
@@ -882,6 +907,7 @@ body {
     position: relative;
     gap: 43px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     width: 93%;
     gap: 42px;
@@ -925,6 +951,7 @@ body {
   mask-composite: exclude;
   box-sizing: content-box;
   margin-bottom: 30px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-bottom: 8px;
   }
@@ -966,12 +993,11 @@ body {
     padding-bottom: 50px;
   }
 }
+
 // botton_arrow
 .payment_block_arrow {
   display: flex;
   @include wigth_height(69px, 160px);
-  // height: 160px;
-  // width: 69px;
   align-items: center;
   background-image: url("/assets/icons/arrow-bold.svg");
   background-repeat: no-repeat;
@@ -1012,14 +1038,21 @@ body {
   background-position: bottom right;
   background-size: auto;
   padding-bottom: 182px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     padding-bottom: 60px;
     background-image: url("/assets/image/main/background/leav_foto_320.png");
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     padding-bottom: 80px;
     padding-bottom: 12.6%;
-    // TODO - добавить фоновое изображение!
+    background-image: url("/assets/image/main/background/640px/leav_foto_640.png");
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    background-image: url("/assets/image/main/background/1000px/leav_foto_1000.png");
+    padding-bottom: 140px;
   }
 }
 
@@ -1071,6 +1104,19 @@ body {
       display: none;
     }
   }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    #feedback-1 {
+      display: none;
+    }
+    #feedback-4 {
+      display: block;
+    }
+
+    #feedback-3 {
+      display: none;
+    }
+  }
 }
 
 .testimonials__header {
@@ -1078,6 +1124,7 @@ body {
   text-align: center;
   margin-top: 140px;
   margin-bottom: 45px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     font-size: 24px;
     line-height: 120%;
@@ -1088,6 +1135,11 @@ body {
     margin-top: 59px;
     margin-bottom: 31px;
     margin-right: 4px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    margin-top: 102px;
+    margin-bottom: 29px;
   }
 }
 
@@ -1112,7 +1164,9 @@ body {
     @include wigth_height(93%, 105px);
   }
 
-  // margin-bottom: 30px;
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    @include wigth_height(289px, 388px);
+  }
 }
 
 .feedback__container {
@@ -1130,16 +1184,25 @@ body {
   width: 83%;
   justify-content: center;
   padding-top: 15px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     justify-content: flex-start;
     gap: 6px;
     padding-top: 10px;
     padding-left: 10px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     justify-content: flex-start;
     padding-top: 12px;
     margin-left: 10px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    justify-content: flex-start;
+    padding-top: 13px;
+    padding-left: 13px;
+    margin-bottom: 11px;
   }
 }
 
@@ -1170,9 +1233,11 @@ body {
     @extend %font-style-300;
     color: #767474;
   }
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     height: 35%;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     padding-left: 16px;
     width: 93%;
@@ -1183,17 +1248,23 @@ body {
 .container__button_feedback {
   margin: auto;
   width: 72.5%;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: flex;
     width: 74.5%;
     justify-content: center;
     margin-top: 31px;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     display: flex;
     width: 37.5%;
     justify-content: center;
     margin-top: 31px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 94%;
   }
 }
 
@@ -1204,30 +1275,40 @@ body {
 .rangeslider {
   margin: 0 auto;
   padding: 15px 0;
-  width: 599px;
-  height: 8px;
+  @include wigth_height(599px, 8px);
   margin-bottom: 20px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
+
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     display: none;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    padding: 13px 0;
+    width: 403px;
+    margin-bottom: 45px;
   }
 }
 
 .input-range__feedback {
+  @include wigth_height(100%, 6px);
   border: 0.5px solid transparent;
   border-radius: 5px;
   background-image: linear-gradient(#f5f7f6, #f5f7f6), $pink_gradient;
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  height: 6px;
-  width: 100%;
   -moz-appearance: none;
   -webkit-appearance: none;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 97%;
+  }
 }
 
 .rangeslider input::-webkit-slider-thumb {
@@ -1241,6 +1322,10 @@ body {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 75px;
+  }
 }
 
 .rangeslider input::-webkit-slider-thumb:active {

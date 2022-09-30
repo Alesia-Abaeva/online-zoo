@@ -28,16 +28,16 @@
   height: 80px;
   gap: 63px;
 
-  @media (max-width: 320px) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
     height: 34px;
   }
-  @media (max-width: $tablet) {
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
     max-width: $tablet;
     // height: 34px;
   }
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
-    max-width: $min-small_desktop;
+    max-width: $max-small_desktop;
   }
 }
 
@@ -64,7 +64,7 @@
     font-size: 19px;
   }
 
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     @include wigth_height(47px, 30px);
     border: none;
     .logo__icon {
@@ -87,16 +87,21 @@
   padding: 0;
   gap: 58px;
   margin-right: 375px;
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
-  @media (max-width: $tablet) {
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
     display: none;
   }
   //   TODO - сделать бургер меню!!!!
 
-  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+  @media (min-width: $min-small_desktop_for_header) and (max-width: $max-small_desktop) {
     margin-right: 198px; // TODO - @debug
+    gap: 48px;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $min-small_desktop_for_header) {
+    margin-right: 0px; // TODO - @debug
     gap: 48px;
   }
 }
@@ -107,7 +112,7 @@ a {
 }
 
 .header__designed {
-  @media (max-width: $mobile) {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
     display: none;
   }
 }
