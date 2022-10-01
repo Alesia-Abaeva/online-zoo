@@ -282,11 +282,17 @@
   @include wigth_height(284px, 246px);
   max-width: 284px;
   max-height: 246px;
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     @include wigth_height(160px, 138px);
     background-size: cover;
     max-width: 284px;
     max-height: 246px;
+  }
+
+  @media (min-width: 452px) and (max-width: 599px) {
+    @include wigth_height(160px, 138px);
+    background-size: contain;
   }
 }
 

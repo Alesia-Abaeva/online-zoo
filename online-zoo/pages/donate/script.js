@@ -208,5 +208,5 @@ function amountPrice(activeAmound = 0) {
   }
 }
 
-amountPrice(4);
+amountPrice(5);
 // .paragraf_active

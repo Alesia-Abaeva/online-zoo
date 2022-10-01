@@ -47,7 +47,17 @@ FOOTER
     gap: 19px;
   }
 
-  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+  @media (min-width: 790px) and (max-width: 951px) {
+    // grid-template-rows: 114px 149px;
+    // margin-left: 2%;
+
+    padding-right: 9px;
+    grid-template-rows: 114px 149px;
+    margin-left: 1%;
+    margin-right: -14px;
+  }
+
+  @media (min-width: 952px) and (max-width: $max-small_desktop) {
     // grid-template-rows: 114px 149px;
     // margin-left: 2%;
 
@@ -82,13 +92,13 @@ FOOTER
 .footer_icon {
   margin-top: 40px;
   @media (min-width: $min-tablet) and (max-width: $tablet) {
-    margin-top: 12px;
-    margin-left: 9px;
+    margin-top: 13px;
+    margin-left: 10px;
     padding-bottom: 2px;
   }
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     position: absolute;
-    top: 17px;
+    top: 6px;
     left: 96px;
     margin-top: 0px;
   }
@@ -99,11 +109,36 @@ FOOTER
 }
 
 .footer__logo {
+  @extend %display-Flex-center-style;
+  width: 80px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  position: relative;
+
+  .logo_icon_footer {
+    background-image: url("/assets/icons/bamboo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 17px;
+    position: absolute;
+    left: 10px;
+    top: 24px;
+  }
+  h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 19px;
+  }
+
   @media (min-width: $mobile) and (max-width: $max-mobile) {
+    border: none;
     width: 128px;
     display: flex;
     margin: auto;
     justify-content: center;
+
     h1 {
       font-size: 19px;
     }
@@ -111,7 +146,7 @@ FOOTER
       width: 12px;
       height: 22px;
       left: 72px;
-      top: -1px;
+      top: 8px;
     }
   }
 }

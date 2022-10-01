@@ -9,6 +9,9 @@
 
   @media (min-width: $mobile) and (max-width: $tablet) {
     height: 34px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
   }
 
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
@@ -18,7 +21,7 @@
   }
 }
 .header__container {
-  max-width: $desktop; //**
+  // max-width: $desktop; //**
   margin: auto; //**
   @extend %display-Flex-center-style;
   justify-content: center;
@@ -26,18 +29,25 @@
   gap: 63px;
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
-    max-width: $mobile;
+    // max-width: $mobile;
     height: 34px;
     gap: 36.8%;
+    // position: fixed;
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
-    max-width: $tablet;
+    // max-width: $tablet;
     height: 34px;
     gap: 41.8%;
+    // position: fixed;
+  }
+  @media (min-width: $min-small_desktop) and (max-width: 959px) {
+    // max-width: $max-small_desktop;
+    width: 100%;
+    gap: 50px;
   }
 
-  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+  @media (min-width: 960px) and (max-width: $max-small_desktop) {
     max-width: $max-small_desktop;
   }
 }
@@ -104,6 +114,11 @@
     margin-right: 198px; // TODO - @debug
     gap: 48px;
   }
+  // @media (min-width: $min-small_desktop) and (max-width: 959px) {
+  //   // max-width: $max-small_desktop;
+  //   width: 100%;
+  //   gap: 50px;
+  // }
 
   @media (min-width: $min-small_desktop) and (max-width: $min-small_desktop_for_header) {
     margin-right: 0px; // TODO - @debug
@@ -114,6 +129,9 @@
 a {
   @extend %nav-font-style;
   text-decoration: none;
+}
+.item_designed_link {
+  display: none;
 }
 
 .header__designed {

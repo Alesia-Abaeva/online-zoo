@@ -12,6 +12,7 @@ const generateMultiplePages = (pages) =>
         template: path.join(__dirname, "pages", name, "index.html"),
         filename: `${name === pages[0] ? "index" : name}.html`,
         chunks: [`${name}`],
+        favicon: "./src/img/favicon.png",
         // clean: true,
       })
   );

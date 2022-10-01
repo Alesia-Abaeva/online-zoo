@@ -64,11 +64,13 @@ body {
     background-image: url("/assets/image/donate/mob_background/panda_bg_320.png");
     background-size: contain;
     background-position: bottom;
+    padding-top: 34px;
   }
 
   @media (min-width: 322px) and (max-width: 451px) {
     height: 187px;
     background-size: cover;
+    padding-top: 34px;
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
@@ -76,6 +78,7 @@ body {
     background-image: url("/assets/image/donate/tablet_background/panda_bg_640.jpg");
     background-size: cover;
     background-position: bottom;
+    padding-top: 34px;
   }
 
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
@@ -94,11 +97,13 @@ body {
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     max-width: $mobile;
     margin-left: 39%;
+    padding-top: 34px;
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     max-width: $tablet;
     margin-left: 41%;
+    padding-top: 34px;
   }
 
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
@@ -237,14 +242,14 @@ body {
     padding-top: 63px;
   }
 
-  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+  @media (min-width: $min-small_desktop) and (max-width: $small_desktop_1400) {
     gap: 31px;
     padding-top: 95px;
   }
 }
 .backstage__content_img {
-  width: 38%;
-  height: 100%;
+  // width: 38%;
+  // height: 100%;
   @include wigth_height(609px, 403px);
   background: url("/assets/image/main/bamboo-cap.jpg");
 
@@ -256,8 +261,14 @@ body {
     display: none;
   }
 
+  @media (min-width: $tablet) and (max-width: 929px) {
+    @include wigth_height(355px, 308px);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   // ---small_desktop
-  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+  @media (min-width: 930px) and (max-width: $small_desktop_1400) {
     @include wigth_height(455px, 408px);
     background-position: center;
   }
@@ -447,19 +458,23 @@ body {
   margin-left: 0px;
   margin-bottom: 20px;
   transition: 0.5s ease-in;
+  margin-right: 27px;
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 285px;
+    margin-right: 0px;
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     width: 285px;
     margin-bottom: 63px; //@debug
+    margin-right: 0px;
   }
 
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     width: 293px;
     margin-bottom: 63px;
+    margin-right: 0px;
   }
 }
 
@@ -697,8 +712,13 @@ body {
     gap: 5%;
     top: 35.3%;
   }
+  @media (min-width: 790px) and (max-width: 942px) {
+    justify-content: center;
+    gap: 17%;
+    top: 24.4%;
+  }
 
-  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+  @media (min-width: 943px) and (max-width: $max-small_desktop) {
     justify-content: center;
     gap: 17%;
     top: 34.4%;
@@ -1020,7 +1040,17 @@ body {
     top: 126px;
     right: 12px;
   }
-  @media (min-width: $min-tablet) and (max-width: $tablet) {
+
+  @media (min-width: $min-tablet) and (max-width: 632px) {
+    background-image: url("/assets/icons/arrow/arrow_green_horisontal.svg");
+    position: absolute;
+    z-index: 99999;
+    @include wigth_height(90px, 42px);
+    top: -5%;
+    left: 39.6%;
+  }
+
+  @media (min-width: 633px) and (max-width: $tablet) {
     background-image: url("/assets/icons/arrow/arrow_green_horisontal.svg");
     position: absolute;
     z-index: 99999;
@@ -1033,7 +1063,15 @@ body {
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     top: 376px;
   }
-  @media (min-width: $min-tablet) and (max-width: $tablet) {
+
+  @media (min-width: $min-tablet) and (max-width: 632px) {
+    @include wigth_height(69px, 160px);
+    background-image: url("/assets/icons/pick_green_arrow.svg");
+    left: 75.6%;
+    top: 34%;
+  }
+
+  @media (min-width: 633px) and (max-width: $tablet) {
     left: 58.6%;
   }
 }
