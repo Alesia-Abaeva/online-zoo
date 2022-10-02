@@ -49,6 +49,11 @@ module.exports = {
     new HtmlWebpackHarddiskPlugin(),
     ...generateMultiplePages(APP_PAGES),
   ],
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, "assets"),
+    },
+  },
   module: {
     rules: [
       {

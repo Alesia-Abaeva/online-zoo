@@ -33,7 +33,7 @@
 .pick-and-feed__container_donate {
   height: auto;
   margin-bottom: 0;
-  width: 93.5%;
+  width: 72.5%;
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     width: 94%;
   }
@@ -175,10 +175,12 @@
   // gap: 11px;
   margin-bottom: 49px;
   margin-left: 308px;
+  margin-top: 60px;
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     margin-left: 0;
     margin-bottom: 4px;
+    margin-top: 0;
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
