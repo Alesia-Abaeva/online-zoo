@@ -1,0 +1,59 @@
+/*--------------------------------------------------------------
+3.0 - BUTTONS
+--------------------------------------------------------------*/
+.buttons {
+  @extend %button-default-orange;
+  @extend %nav-font-style;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+.buttons__watch {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    position: absolute;
+    right: -6px;
+  }
+
+  @media (min-width: $min-tablet) and (max-width: 613px) {
+    position: absolute;
+    right: 34%;
+    top: 87%;
+  }
+
+  @media (min-width: 614px) and (max-width: $tablet) {
+    position: absolute;
+    right: 123%;
+    top: 74%;
+  }
+}
+.buttons:hover {
+  background: $button-hover-orange;
+  // transition: all 2s ease-in-out;
+  // TODO - плавность перехода
+}
+
+.buttons:active {
+  background: $color-active-green;
+}
+
+.button_circle {
+  background: $color-gradient;
+  width: 62px;
+  height: 62px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.button_circle:active {
+  background: $color-active-green;
+}
+
+.square-buttons {
+  border-radius: 5px;
+}
+
+.animal-button {
+  background: $border-orage-line;
+}

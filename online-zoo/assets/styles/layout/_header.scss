@@ -1,0 +1,258 @@
+/*--------------------------------------------------------------
+1.0 - HEADER
+--------------------------------------------------------------*/
+
+.header {
+  height: 80px;
+  background-color: $nav-color;
+  @extend %nav-font-style;
+
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    height: 34px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    width: 100%;
+    z-index: 9999;
+    position: relative;
+  }
+}
+.header__container {
+  // max-width: $desktop; //**
+  margin: auto; //**
+  @extend %display-Flex-center-style;
+  justify-content: center;
+  height: 80px;
+  gap: 63px;
+
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    // max-width: $mobile;
+    height: 34px;
+    gap: 36.8%;
+    // position: fixed;
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    // max-width: $tablet;
+    height: 34px;
+    gap: 41.8%;
+    // position: fixed;
+  }
+  @media (min-width: $min-small_desktop) and (max-width: 960px) {
+    // max-width: $max-small_desktop;
+    width: 100%;
+    gap: 50px;
+  }
+
+  @media (min-width: 960px) and (max-width: $max-small_desktop) {
+    max-width: $max-small_desktop;
+  }
+}
+
+// ==========================
+header.active_burger {
+  position: fixed;
+  // z-index: 999;
+  background-color: #ffffff;
+  height: 329px;
+  .header__container {
+    // z-index: 9;
+    margin-left: 10px;
+    margin-top: 10px;
+    gap: 15px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .header__logo {
+      z-index: 9;
+      border: 0.7px solid #fe9013;
+      h1 {
+        color: #fe9013;
+      }
+      .logo__icon {
+        background-image: url("/assets/icons/bamboo_orange.svg");
+      }
+    }
+
+    .header__menu {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 15px;
+      // .menu-links {
+      //   color: black;
+      // }
+    }
+    .menu-links {
+      color: black;
+    }
+  }
+}
+
+.header__logo {
+  @extend %display-Flex-center-style;
+  width: 80px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  position: relative;
+  .logo__icon {
+    background-image: url("/assets/icons/bamboo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 17px;
+    position: absolute;
+    left: 10px;
+    top: 24px;
+  }
+  h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 19px;
+  }
+
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    @include wigth_height(47px, 30px);
+    border: none;
+    .logo__icon {
+      @include wigth_height(10px, 14px);
+      left: 3px;
+      top: 12px;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 12.2px;
+      line-height: 120%;
+    }
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    margin-top: 2px;
+  }
+}
+
+.header__menu {
+  @extend %display-Flex-center-style;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 58px;
+  margin-right: 375px;
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    display: none;
+  }
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    display: none;
+  }
+  //   TODO - сделать бургер меню!!!!
+
+  @media (min-width: $min-small_desktop_for_header) and (max-width: $max-small_desktop) {
+    margin-right: 198px; // TODO - @debug
+    gap: 48px;
+  }
+  // @media (min-width: $min-small_desktop) and (max-width: 959px) {
+  //   // max-width: $max-small_desktop;
+  //   width: 100%;
+  //   gap: 50px;
+  // }
+
+  @media (min-width: $min-small_desktop) and (max-width: $min-small_desktop_for_header) {
+    margin-right: 0px; // TODO - @debug
+    gap: 48px;
+  }
+}
+
+a {
+  @extend %nav-font-style;
+  text-decoration: none;
+}
+.item_designed_link {
+  display: none;
+}
+
+.header__designed {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    display: none;
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-links:hover {
+  @extend %orange-gradient;
+  transition: all 0.2s;
+}
+
+.menu-links:active {
+  @extend %none-gradient;
+}
+
+.links-active {
+  @extend %orange-gradient;
+}
+
+// burger-menu
+
+.header__burger {
+  display: none;
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    // display: block;
+    @include wigth_height(18px, 10px);
+    position: relative;
+    display: block;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      @include burger-menu-span;
+      bottom: 8px;
+    }
+
+    &::before {
+      content: "";
+      @include burger-menu-span;
+      top: 4px;
+    }
+
+    span {
+      @include burger-menu-span;
+      top: 8px;
+    }
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    margin-bottom: 3px;
+    margin-right: 2px;
+  }
+}
+
+.header__burger.active-burger-menu {
+  span {
+    opacity: 0;
+  }
+  &::after {
+    backface-visibility: hidden;
+    top: 4px;
+    transform: rotate(50deg);
+    transition: 0.55s 0.5s;
+    background-color: aquamarine;
+  }
+
+  &::before {
+    backface-visibility: hidden;
+    top: 4px;
+    transform: rotate(-410deg);
+    transition: 0.55s 0.5s;
+    background-color: aquamarine;
+  }
+}
