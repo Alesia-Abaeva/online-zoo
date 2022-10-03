@@ -41,7 +41,7 @@
     gap: 41.8%;
     // position: fixed;
   }
-  @media (min-width: $min-small_desktop) and (max-width: 959px) {
+  @media (min-width: $min-small_desktop) and (max-width: 960px) {
     // max-width: $max-small_desktop;
     width: 100%;
     gap: 50px;
@@ -204,7 +204,9 @@ a {
 // burger-menu
 
 .header__burger {
+  display: none;
   @media (min-width: $mobile) and (max-width: $tablet) {
+    // display: block;
     @include wigth_height(18px, 10px);
     position: relative;
     display: block;

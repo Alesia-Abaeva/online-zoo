@@ -220,6 +220,7 @@ body {
   // ---small_desktop
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     background: none;
+    margin-top: 4px;
   }
 }
 
@@ -238,12 +239,12 @@ body {
     padding-top: 66px;
   }
 
-  @media (min-width: $min-tablet) and (max-width: $tablet) {
+  @media (min-width: $min-tablet) and (max-width: 791px) {
     max-width: $tablet;
     padding-top: 63px;
   }
 
-  @media (min-width: $min-small_desktop) and (max-width: $small_desktop_1400) {
+  @media (min-width: 791px) and (max-width: $small_desktop_1400) {
     gap: 31px;
     padding-top: 95px;
   }
@@ -295,7 +296,7 @@ body {
   font-weight: 400;
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
-    width: 93%;
+    width: 94%;
     margin-bottom: 10px;
   }
 
@@ -310,6 +311,10 @@ body {
     line-height: 120%;
     font-weight: 400;
 
+    @media (min-width: $min-tablet) and (max-width: $tablet) {
+      margin-left: 3px;
+    }
+
     @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
       margin-bottom: 23px;
     }
@@ -323,6 +328,7 @@ body {
     @media (min-width: $min-tablet) and (max-width: $tablet) {
       margin-top: 32px;
       margin-bottom: 19px;
+      margin-left: 3px;
     }
   }
   .description__paragraf {

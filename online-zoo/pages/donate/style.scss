@@ -34,6 +34,14 @@
   height: auto;
   margin-bottom: 0;
   width: 72.5%;
+
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    width: 93.5%;
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    width: 93.5%;
+  }
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
     width: 94%;
   }
@@ -86,7 +94,7 @@
     }
     p {
       margin-bottom: 32px;
-      width: 96.5%;
+      width: 98.5%;
       line-height: 137%;
     }
 
@@ -97,7 +105,7 @@
     }
   }
   @media (min-width: $min-tablet) and (max-width: $tablet) {
-    width: 93.5%;
+    width: 94.5%;
     h3 {
       @include fonts-size-heigth-weigth-color(24px, 120%, 400, $white);
       padding-top: 31px;
@@ -105,7 +113,7 @@
     }
     p {
       margin-bottom: 32px;
-      width: 100%;
+      width: 99%;
       line-height: 137%;
     }
 
@@ -131,6 +139,7 @@
     margin-right: 2px;
     padding-top: 31px;
     margin-bottom: 22px;
+    font-size: 48px;
   }
 
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
@@ -165,6 +174,10 @@
     @include fonts-size-heigth-weigth-color(16px, 140%, 400, $black-blue);
     margin-left: 1px;
     text-align: center;
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    font-size: 24px;
   }
 }
 
@@ -530,8 +543,8 @@
     }
 
     @media (min-width: $min-tablet) and (max-width: $tablet) {
-      width: 165px;
-      height: 23px;
+      width: 164px;
+      height: 25px;
       padding: 8px;
     }
 
