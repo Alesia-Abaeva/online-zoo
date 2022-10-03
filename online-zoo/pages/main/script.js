@@ -1,10 +1,14 @@
 import "./style.scss";
 import animals from "../../src/constnts/animal";
 
-window.addEventListener("resize", function () {
-  let pageWidth = document.documentElement.scrollWidth;
-  console.log(pageWidth);
-});
+// let count = 6;
+
+// window.addEventListener("resize", function () {
+//   let pageWidth = document.documentElement.scrollWidth;
+//   //   if (pageWidth <= 780) {
+//   //   }
+//   console.log(pageWidth);
+// });
 
 function addAnimal(count = 6) {
   let array = getElementAnimals(animals, count);
@@ -29,7 +33,7 @@ function addAnimal(count = 6) {
     animalSliderContainer.appendChild(animalContainer);
   }
 }
-addAnimal();
+// addAnimal();
 
 // 1 - выбрать 6 элементов из массива - рандомно!
 // 2 - записать результат в переменную
@@ -43,7 +47,7 @@ function rundomElementFromArray(array) {
 }
 
 // filling the array with unique data
-function getElementAnimals(array, count, color) {
+function getElementAnimals(array, count) {
   let unic;
   let arr = [];
   let result;
@@ -63,3 +67,16 @@ function getElementAnimals(array, count, color) {
   }
   return arr;
 }
+
+let burgerMenu = document.querySelector(".header__burger"); //кнопка
+let header = document.querySelector(".header"); //навигация
+// let headerBackground = document.querySelector('.body__conteiner');
+let shadow = document.getElementById("shadow-overlay");
+// const links = Array.from(menuHeader.children);
+
+burgerMenu.onclick = function onclickBurger() {
+  //   console.log("asdasd");
+  burgerMenu.classList.toggle("active-burger-menu");
+  shadow.classList.toggle("shadow__overlay");
+  header.classList.toggle("active_burger");
+};
