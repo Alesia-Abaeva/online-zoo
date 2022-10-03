@@ -53,12 +53,12 @@ const animals = [
     description: "Native to Antarctica",
     food: "meat",
   },
-  {
-    src: eagles,
-    title: "Eagles",
-    description: "Native to South America",
-    food: "meat",
-  },
+  // {
+  //   src: eagles,
+  //   title: "Eagles",
+  //   description: "Native to South America",
+  //   food: "meat",
+  // },
   {
     src: alligator,
     title: "Alligators",

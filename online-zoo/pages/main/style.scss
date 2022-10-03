@@ -407,18 +407,18 @@ body {
     margin-left: -1%; //TODO - проверить отступы!
     margin-bottom: -1px;
 
-    #sloth {
-      display: none;
-    }
-    #cheetahs {
-      display: none;
-    }
-    #penguins {
-      display: none;
-    }
-    #alligators {
-      display: block;
-    }
+    // #sloth {
+    //   display: none;
+    // }
+    // #cheetahs {
+    //   display: none;
+    // }
+    // #penguins {
+    //   display: none;
+    // }
+    // #alligators {
+    //   display: block;
+    // }
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
@@ -428,18 +428,18 @@ body {
     padding-left: 0%; //@debug
     margin-bottom: 0px;
     gap: 27px; //@debug
-    #sloth {
-      display: none;
-    }
-    #cheetahs {
-      display: none;
-    }
-    #penguins {
-      display: none;
-    }
-    #alligators {
-      display: block;
-    }
+    // #sloth {
+    //   display: none;
+    // }
+    // #cheetahs {
+    //   display: none;
+    // }
+    // #penguins {
+    //   display: none;
+    // }
+    // #alligators {
+    //   display: block;
+    // }
   }
 
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
@@ -451,6 +451,7 @@ body {
 }
 
 .container_animal {
+  transition: 0.55s 0.5s;
   width: 366px;
   border-radius: 5px;
   border: 1px solid transparent;

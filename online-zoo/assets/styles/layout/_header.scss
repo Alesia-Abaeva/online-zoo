@@ -6,6 +6,7 @@
   height: 80px;
   background-color: $nav-color;
   @extend %nav-font-style;
+  transition: 0.55s 0.5s;
 
   @media (min-width: $mobile) and (max-width: $tablet) {
     height: 34px;
@@ -27,6 +28,7 @@
   justify-content: center;
   height: 80px;
   gap: 63px;
+  transition: all 2s ease-in-out;
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     // max-width: $mobile;
@@ -69,6 +71,7 @@ header.active_burger {
     justify-content: flex-start;
 
     .header__logo {
+      transition: 0.55s 0.5s;
       z-index: 9;
       border: 0.7px solid #fe9013;
       h1 {
@@ -86,12 +89,18 @@ header.active_burger {
       justify-content: flex-start;
       align-items: flex-start;
       gap: 15px;
+      // transition: 0.55s 0.5s;
+
       // .menu-links {
       //   color: black;
       // }
     }
     .menu-links {
+      // color: inherit;
       color: black;
+    }
+    .header__designed {
+      display: block;
     }
   }
 }
@@ -102,6 +111,7 @@ header.active_burger {
   height: 50px;
   border: 1px solid #ffffff;
   border-radius: 2px;
+
   position: relative;
   .logo__icon {
     background-image: url("/assets/icons/bamboo.svg");
@@ -237,6 +247,10 @@ a {
 }
 
 .header__burger.active-burger-menu {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  right: 5%;
   span {
     opacity: 0;
   }
@@ -245,7 +259,7 @@ a {
     top: 4px;
     transform: rotate(50deg);
     transition: 0.55s 0.5s;
-    background-color: aquamarine;
+    background-color: black;
   }
 
   &::before {
@@ -253,6 +267,6 @@ a {
     top: 4px;
     transform: rotate(-410deg);
     transition: 0.55s 0.5s;
-    background-color: aquamarine;
+    background-color: black;
   }
 }
