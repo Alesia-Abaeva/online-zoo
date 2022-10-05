@@ -398,27 +398,10 @@ body {
   margin-left: 13%;
   margin-bottom: 60px;
 
-  #alligators {
-    display: none;
-  }
-
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 97.7%;
     margin-left: -1%; //TODO - проверить отступы!
     margin-bottom: -1px;
-
-    // #sloth {
-    //   display: none;
-    // }
-    // #cheetahs {
-    //   display: none;
-    // }
-    // #penguins {
-    //   display: none;
-    // }
-    // #alligators {
-    //   display: block;
-    // }
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
@@ -428,18 +411,6 @@ body {
     padding-left: 0%; //@debug
     margin-bottom: 0px;
     gap: 27px; //@debug
-    // #sloth {
-    //   display: none;
-    // }
-    // #cheetahs {
-    //   display: none;
-    // }
-    // #penguins {
-    //   display: none;
-    // }
-    // #alligators {
-    //   display: block;
-    // }
   }
 
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
@@ -467,6 +438,7 @@ body {
   margin-bottom: 20px;
   transition: 0.5s ease-in;
   margin-right: 27px;
+  animation: zoom forwards 0.7s ease-out 1;
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 285px;
@@ -1387,4 +1359,20 @@ body {
 
 .rangeslider input::-webkit-slider-thumb:active {
   background: $color-active-green;
+}
+
+@keyframes fallAway {
+  0% {
+    transform: rotateZ(0deg);
+    top: 0;
+    opacity: 1;
+  }
+  25% {
+    transform: rotateZ(-15deg);
+  }
+  100% {
+    top: 300px;
+    transform: rotateZ(-5deg);
+    opacity: 0;
+  }
 }
