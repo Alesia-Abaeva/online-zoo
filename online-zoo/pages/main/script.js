@@ -202,3 +202,46 @@ function changeSlideArray(direction) {
     addAnimal(countAnimal, setAnimalsSleder[activeArraysAnimalIndex]);
   }
 }
+
+/*--------------------------------------------------------------
+
+--------------------------------------------------------------*/
+
+let rangeTestimonialsElement = document.getElementById("feedback_range");
+// const carousel = document.querySelector(".testimonials__container_carousel"),
+const carousel = document.querySelector(".testimonials__container_feedback");
+const testimonialsGap = 30;
+const visibleTestimonials = 4;
+const testimonialsCount = carousel.childElementCount - visibleTestimonials;
+console.log(testimonialsCount);
+
+// Считаем ширину отзыва с отступом
+const testimonialElementWidth =
+  carousel.firstElementChild.getBoundingClientRect().width + testimonialsGap;
+
+// Порог срабатывания переключения, считая текущий максимум ренджа деленный на их количество и обрубая дробную часть
+const rangeBoundary = Math.trunc(
+  rangeTestimonialsElement.max / testimonialsCount
+);
+console.log(rangeBoundary);
+
+// Переназначаем максимальный рендж для того чтобы в дальнейшем считать без дробной части
+rangeTestimonialsElement.max = rangeBoundary * testimonialsCount;
+
+rangeTestimonialsElement.oninput = function (event) {
+  const currentRangeValue = event.target.value;
+
+  // Проверяем достижение нашего порога срабатывания переключения на след отзыв проверкой деления на остаток
+  // Если при делении текущего ренджа на значение границы переключения получается в остатке 0, значит нужно переключать на след отзыв
+  const isReachedRangeBoundary = currentRangeValue % rangeBoundary === 0;
+
+  // Считаем текущий отзыв, который находится в левом положении, в зависимости нахождения полосы прокрутки
+  const currentTestimonialCount = currentRangeValue / rangeBoundary;
+
+  if (isReachedRangeBoundary) {
+    carousel.style.transform = `translateX(-${
+      // считаем отступ на который нам нужно переключиться и переключаемся
+      testimonialElementWidth * currentTestimonialCount
+    }px)`;
+  }
+};
