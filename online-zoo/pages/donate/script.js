@@ -68,11 +68,6 @@ function addAmountValue(price, node) {
   amountInput.value = value.slice(1);
 }
 
-// function checkInputValue(node, price) {
-//   if (node.value === price) {
-//   }
-// }
-
 amountInput.oninput = (event) => {
   if (event.target.value.length > 4) {
     event.target.value = event.target.value.slice(0, event.target.maxLength);

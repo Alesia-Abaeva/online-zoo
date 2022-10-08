@@ -1,10 +1,19 @@
 import "./style.scss";
 import { addHeaderAndFooter } from "src/components/header";
 import animals from "../../src/constnts/animal";
+import testimonials from "../../src/constnts/testimonials";
 import { addBurgerMenu } from "src/components/burger-menu";
 import "./style.scss";
+import { addTestimonials } from "../../src/components/testimonials";
+// addTestimonials
+// console.log(testimonials.length);
 
 // constants
+let rangeTestimonialsElement = document.getElementById("feedback_range");
+// const carousel = document.querySelector(".testimonials__container_carousel"),
+const carousel = document.querySelector(".testimonials__container_feedback");
+const testimonialsGap = 30;
+let visibleTestimonials = 4;
 const leftArrow = document.querySelector(".left_arrow");
 const rightArrow = document.querySelector(".rigth_arrow");
 let arrayAnimalGenerate = [];
@@ -16,6 +25,7 @@ let activeArraysAnimalIndex = 0;
 let countAnimal = 6;
 let setAnimalsSleder = addArraysAnimal(animals, 6); //создаем набор массивов для слайдера
 const mobileBreakpoint = 790;
+const desktopSmallBreakpiont = 1200;
 
 const windowInnerWidth = document.documentElement.clientWidth;
 let pageWidth = document.documentElement.scrollWidth;
@@ -33,6 +43,7 @@ if (isMobile) {
 addHeaderAndFooter();
 addBurgerMenu();
 addAnimal(countAnimal, setAnimalsSleder[activeArraysAnimalIndex]);
+addTestimonials(11, testimonials, carousel);
 
 leftArrow.onclick = () => {
   changeSlideArray("left");
@@ -94,35 +105,6 @@ function getElementAnimals(arrayOrigin, count) {
   return arr;
 }
 
-// ГЕНЕРИРУЕМ НОВЫЙ МАССИВ, СРАВНИВАЯ ЕГО С УЖЕ СГЕНЕРИРОВАННЫМ МАССИВОМ
-// function getNewElementAnimals(arrayOrigin, count, array) {
-//   let unic;
-//   let arr = array;
-//   let arrayNew = [];
-//   let result;
-//   while (arrayNew.length < count) {
-//     do {
-//       unic = true;
-//       result = rundomElementFromArray(arrayOrigin);
-//       for (let i = 0; i < arr.length; i++) {
-//         if (result === arr[i] || result === arrayNew[i]) {
-//           unic = false;
-//           break;
-//         }
-//       }
-//     } while (!unic);
-//     arrayNew.push(result);
-//   }
-//   console.log(arrayNew, "arrayNew");
-
-//   return arrayNew;
-// }
-
-// window.addEventListener("click", (e) => {
-//   const target = e.target;
-//   console.log(target);
-// });
-
 // удалить содержимое в блоке container_animal
 function removeAnimal(node) {
   let test = document.querySelectorAll(`${node}`);
@@ -130,28 +112,6 @@ function removeAnimal(node) {
     elem.parentNode.removeChild(elem);
   });
 }
-
-// ЗАПОЛНЯЕМ НОВЫМ СОДЕРЖИМЫМ
-// function generateNewSet(arrayOrigin, count = 6) {
-//   arrayAnimalGenerate = arrayOrigin;
-
-//   for (let i = 0; i < count; i++) {
-//     const animalContainer = document.createElement("div");
-//     animalContainer.classList.add("container_animal");
-//     animalContainer.innerHTML = `<div class="wrapper_pic">
-//     <img class="animal_pic" src="${arrayOrigin[i].src}" alt="${arrayOrigin[i].title}">
-// </div>
-// <div class="animal_wrapper_description">
-//     <div class="animal__description">
-//         <h5 class="animal_name">${arrayOrigin[i].title}</h5>
-//         <p class="animal_geo">${arrayOrigin[i].description}</p>
-//     </div>
-//     <div class="animal_foods ${arrayOrigin[i].food}"></div>
-// </div>`;
-//     animalConteinerGlobal = animalContainer;
-//     animalSliderContainer.appendChild(animalContainer);
-//   }
-// }
 
 const statefulCardsResize = () => {
   let isResizedSmaller = false;
@@ -204,16 +164,16 @@ function changeSlideArray(direction) {
 }
 
 /*--------------------------------------------------------------
-
+testimonials
 --------------------------------------------------------------*/
 
-let rangeTestimonialsElement = document.getElementById("feedback_range");
-// const carousel = document.querySelector(".testimonials__container_carousel"),
-const carousel = document.querySelector(".testimonials__container_feedback");
-const testimonialsGap = 30;
-const visibleTestimonials = 4;
-const testimonialsCount = carousel.childElementCount - visibleTestimonials;
-console.log(testimonialsCount);
+let isSmallDesktop = getIsMobile(desktopSmallBreakpiont);
+
+if (isSmallDesktop) {
+  visibleTestimonials = 3;
+} else visibleTestimonials = 4;
+
+let testimonialsCount = carousel.childElementCount - visibleTestimonials;
 
 // Считаем ширину отзыва с отступом
 const testimonialElementWidth =
@@ -245,3 +205,9 @@ rangeTestimonialsElement.oninput = function (event) {
     }px)`;
   }
 };
+
+// const feedback = document.querySelectorAll(".feedback__wrapper");
+// const containerFeed = document.querySelectorAll(".feedback__container");
+// const testimonials__container_feedback = document.querySelector(
+//   ".testimonials__container_feedback"
+// );

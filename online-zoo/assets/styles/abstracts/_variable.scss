@@ -46,6 +46,20 @@
   backface-visibility: hidden;
 }
 
+@mixin testimonialsClose {
+  // content: "";
+  width: 10%;
+  height: 2px;
+  margin: 0 auto;
+  background: $white;
+  border-radius: 2px;
+  position: absolute;
+  // top: 6px;
+  z-index: 10;
+  transition: 0.55s;
+  backface-visibility: hidden;
+}
+
 // Size
 $max-mobile: 451px;
 $mobile: 320px; //

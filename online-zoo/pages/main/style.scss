@@ -250,8 +250,6 @@ body {
   }
 }
 .backstage__content_img {
-  // width: 38%;
-  // height: 100%;
   @include wigth_height(609px, 403px);
   background: url("/assets/image/main/bamboo-cap.jpg");
 
@@ -275,18 +273,6 @@ body {
     background-position: center;
   }
 }
-
-// .content_img-bamboo {
-//   max-width: 610px;
-//   @include wigth_height(609px, 403px);
-//   max-height: 403px;
-//   background: url("/assets/image/main/bamboo-cap.jpg");
-
-//   // ---small_desktop
-//   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
-//     @include wigth_height(455px, 408px);
-//   }
-// }
 
 .backstage__content_description {
   // width: 465px;
@@ -572,17 +558,6 @@ body {
     border-radius: inherit;
     transition: 0.5s ease-in;
   }
-
-  // &:hover {
-  //   img {
-  //     opacity: 0.4;
-  //     transform: scale(1.1);
-  //     .animal__description {
-  //       position: absolute;
-  //       left: 0;
-  //     }
-  //   }
-  // }
 }
 
 .container_animal:hover {
@@ -1090,6 +1065,76 @@ body {
   }
 }
 
+.section__testimonials.active-modal {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    position: relative;
+    .testimonials-modal {
+      position: absolute;
+      top: 30px;
+      left: 26px;
+      z-index: 50;
+      box-sizing: border-box;
+      // @include wigth_height(264px, 389px);
+      border: 2px solid transparent;
+      border-radius: 20px;
+      background: $pink_gradient;
+      -webkit-mask: linear-gradient(rgba(255, 255, 255, 0) 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      box-sizing: content-box;
+      @include wigth_height(264px, 389px);
+    }
+    #feedback-text {
+      height: 90%;
+      // width: 80%;
+    }
+
+    .testimonials__modal_close {
+      background-image: url("/assets/icons/x_icon_modal.svg");
+      width: 14px;
+      height: 14px;
+
+      position: absolute;
+      z-index: 10;
+      top: 23px;
+      right: 12px;
+    }
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    position: relative;
+    .testimonials-modal {
+      position: absolute;
+      top: 10%;
+      left: 28%;
+      z-index: 50;
+      box-sizing: border-box;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      background: $pink_gradient;
+      -webkit-mask: linear-gradient(rgba(255, 255, 255, 0) 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      box-sizing: content-box;
+      @include wigth_height(264px, 389px);
+    }
+    #feedback-text {
+      height: 90%;
+    }
+    .testimonials__modal_close {
+      background-image: url("/assets/icons/x_icon_modal.svg");
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      z-index: 10;
+      top: 8%;
+      right: 28%;
+    }
+  }
+}
+
 .testimonials__wrapper {
   max-width: $desktop; //**
   margin: auto; //**
@@ -1107,6 +1152,18 @@ body {
   margin: auto;
   height: 393px; ///!!!!
   overflow: hidden; //!!!!
+
+  @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
+    max-width: 945px;
+  }
+
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    height: 365px;
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    height: 365px;
+  }
 }
 
 .testimonials__container_carousel {
@@ -1128,22 +1185,10 @@ body {
   transform: translateX(0px);
   transition: transform 0.5s;
 
-  // #feedback-4 {
-  //   display: none;
-  // }
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     flex-direction: column;
     gap: 15px;
-    #feedback-1 {
-      display: none;
-    }
-    #feedback-4 {
-      display: block;
-    }
-
-    #feedback-3 {
-      display: none;
-    }
+    position: relative;
   }
 
   @media (min-width: $min-tablet) and (max-width: $tablet) {
@@ -1151,29 +1196,10 @@ body {
     align-items: center;
     gap: 15px;
     margin-bottom: 39px;
-    #feedback-1 {
-      display: none;
-    }
-    #feedback-4 {
-      display: block;
-    }
-
-    #feedback-3 {
-      display: none;
-    }
   }
 
   @media (min-width: $min-small_desktop) and (max-width: $max-small_desktop) {
-    #feedback-1 {
-      display: none;
-    }
-    #feedback-4 {
-      display: block;
-    }
-
-    #feedback-3 {
-      display: none;
-    }
+    // margin-left: 30px;
   }
 }
 
@@ -1227,13 +1253,19 @@ body {
   }
 }
 
+.feedback__wrapper_modal {
+  // opacity: 1;
+  // z-index: 9;
+  // position: absolute;
+}
+
 .feedback__container {
   background: #f1f3f2;
   border-radius: 20px;
   width: 100%;
   height: 100%;
   margin: auto;
-  width: 264px; //!!!!!!!
+  // width: 264px; //!!!!!!!
 }
 
 .feedback__descriptions {

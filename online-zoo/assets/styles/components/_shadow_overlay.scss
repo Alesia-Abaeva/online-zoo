@@ -1,9 +1,37 @@
 .shadow__overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgb(0, 0, 0, 0.4);
-  z-index: 1;
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.4);
+    z-index: 5;
+  }
+  @media (min-width: $min-tablet) and (max-width: $tablet) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.4);
+    z-index: 5;
+  }
+  // position: fixed;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // background-color: rgb(0, 0, 0, 0.4);
+  // z-index: 5;
 }
+
+// .shadow__overlay {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   background-color: rgb(0, 0, 0, 0.4);
+//   z-index: 5;
+// }

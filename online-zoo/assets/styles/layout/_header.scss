@@ -6,7 +6,7 @@
   height: 80px;
   background-color: $nav-color;
   @extend %nav-font-style;
-  transition: 0.55s 0.5s;
+  // transition: 0.55s 0.5s;
 
   @media (min-width: $mobile) and (max-width: $tablet) {
     height: 34px;
@@ -71,14 +71,21 @@ header.active_burger {
     justify-content: flex-start;
 
     .header__logo {
+      width: 64px;
+      height: 41px;
       transition: 0.55s 0.5s;
       z-index: 9;
       border: 0.7px solid #fe9013;
       h1 {
+        font-size: 15px;
         color: #fe9013;
+        transition: 0.55s 0.5s;
       }
       .logo__icon {
         background-image: url("/assets/icons/bamboo_orange.svg");
+        left: 8px;
+        top: 19px;
+        animation: fadeInFromNone 2s ease-in-out;
       }
     }
 
@@ -98,8 +105,11 @@ header.active_burger {
     .menu-links {
       // color: inherit;
       color: black;
+      transition: 0.55s 0.5s;
     }
     .header__designed {
+      transition: 0.55s 0.5s;
+      animation: fadeInFromNone 2s ease-in-out;
       display: block;
     }
   }
@@ -175,11 +185,6 @@ header.active_burger {
     margin-right: 198px; // TODO - @debug
     gap: 48px;
   }
-  // @media (min-width: $min-small_desktop) and (max-width: 959px) {
-  //   // max-width: $max-small_desktop;
-  //   width: 100%;
-  //   gap: 50px;
-  // }
 
   @media (min-width: $min-small_desktop) and (max-width: $min-small_desktop_for_header) {
     margin-right: 0px; // TODO - @debug
@@ -267,7 +272,7 @@ a {
   }
   &::after {
     backface-visibility: hidden;
-    top: 4px;
+    top: 12px;
     transform: rotate(50deg);
     transition: 0.55s 0.5s;
     background-color: black;
@@ -275,7 +280,7 @@ a {
 
   &::before {
     backface-visibility: hidden;
-    top: 4px;
+    top: 12px;
     transform: rotate(-410deg);
     transition: 0.55s 0.5s;
     background-color: black;
@@ -299,4 +304,8 @@ a {
   100% {
     opacity: 0;
   }
+}
+
+.header.testimonials-head {
+  z-index: 1;
 }
