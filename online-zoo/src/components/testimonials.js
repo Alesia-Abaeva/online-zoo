@@ -1,5 +1,4 @@
 export function addTestimonials(count = 11, arraysOrigin, node) {
-  // let array = arraysOrigin;
   const section = document.querySelector(".section__testimonials");
   const modalTestimonials = document.querySelector(".testimonials-modal");
   const shadow = document.getElementById("shadow-overlay-feed");
@@ -80,6 +79,3 @@ export function addTestimonials(count = 11, arraysOrigin, node) {
     header.classList.remove("testimonials-head");
   };
 }
-
-// 1. включать онклик, только на определенных разрешениях
-// 2. добавить крестик

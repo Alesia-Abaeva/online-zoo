@@ -374,6 +374,10 @@ body {
   }
 }
 
+// .section__wrapper_scroll{
+//   overflow: hidden;
+// }
+
 .section__container_scroll {
   display: flex;
   flex-wrap: wrap;
@@ -383,6 +387,15 @@ body {
   box-sizing: border-box;
   margin-left: 13%;
   margin-bottom: 60px;
+  animation-duration: 18s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation: slideIn 0.4s;
+  // width: 100%;
+  // max-width: 1600px;
+  // position: relative;
+  overflow: hidden;
+  animation: fadeInFromNone 1s ease-in-out;
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     width: 97.7%;
@@ -406,6 +419,24 @@ body {
     margin-bottom: 17px;
   }
 }
+// .section__wrapper_scroll {
+//   overflow: auto;
+//   scroll-behavior: smooth;
+//   scrollbar-width: none;
+// }
+
+// .scroll_block {
+//   display: flex;
+//   width: 100%;
+//   flex-wrap: wrap;
+// }
+.animation_left {
+  animation: slideOut 0.2s;
+}
+
+.animation_rigth {
+  animation: slideIn 0.2s;
+}
 
 .container_animal {
   transition: 0.55s 0.5s;
@@ -424,11 +455,13 @@ body {
   margin-bottom: 20px;
   transition: 0.5s ease-in;
   margin-right: 27px;
-  animation-duration: 18s;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
+  // animation-duration: 18s;
+  // animation-direction: normal;
+  // animation-iteration-count: infinite;
+  // animation: slideIn 0.4s;
 
-  animation: fadeInFromNone 1s ease-in-out;
+  position: relative;
+  // animation: fadeInFromNone 1s ease-in-out;
   animation-fill-mode: forwards;
 
   @media (min-width: $mobile) and (max-width: $max-mobile) {
@@ -446,6 +479,24 @@ body {
     width: 293px;
     margin-bottom: 63px;
     margin-right: 0px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 0;
   }
 }
 
@@ -486,7 +537,7 @@ body {
 .animal_geo {
   @extend %nav-font-style;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 120%;
   color: #000;
   margin: 0;

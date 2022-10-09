@@ -15,5 +15,3 @@ export const addBurgerMenu = () => {
     header.classList.remove("active_burger");
   };
 };
-
-// TODO - сделать логотип как на макете и проверить 320px!
