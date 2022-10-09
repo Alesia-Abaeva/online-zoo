@@ -1091,6 +1091,10 @@ body {
 5 - SECTION. TESTIMONIALS
 --------------------------------------------------------------*/
 .section__testimonials {
+  .testimonials-modal {
+    visibility: hidden;
+    position: absolute;
+  }
   // width: 100%;
   background-image: url("/assets/image/main/leav_foto.png");
   height: 100%;
@@ -1115,11 +1119,16 @@ body {
     padding-bottom: 140px;
   }
 }
+// .testimonials-modal {
+//   display: none;
+// }
 
 .section__testimonials.active-modal {
   @media (min-width: $mobile) and (max-width: $max-mobile) {
     position: relative;
     .testimonials-modal {
+      visibility: visible;
+      display: block;
       position: absolute;
       top: 30px;
       left: 26px;
@@ -1156,6 +1165,8 @@ body {
   @media (min-width: $min-tablet) and (max-width: $tablet) {
     position: relative;
     .testimonials-modal {
+      display: block;
+      visibility: visible;
       position: absolute;
       top: 10%;
       left: 28%;
