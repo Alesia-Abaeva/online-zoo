@@ -50,8 +50,8 @@ leftArrow.onclick = () => {
   // sliderAnimation = true;
   if (sliderAnimation === true) {
     return;
-  }
-  changeSlideArray("left");
+  } else changeSlideArray("left");
+
   animationSlider("left");
 };
 
