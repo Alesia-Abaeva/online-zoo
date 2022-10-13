@@ -26,6 +26,7 @@ let countAnimal = 6;
 let setAnimalsSleder = addArraysAnimal(animals, 6); //создаем набор массивов для слайдера
 const mobileBreakpoint = 790;
 const desktopSmallBreakpiont = 1200;
+let sliderAnimation = false;
 
 const windowInnerWidth = document.documentElement.clientWidth;
 let pageWidth = document.documentElement.scrollWidth;
@@ -46,28 +47,42 @@ addAnimal(countAnimal, setAnimalsSleder[activeArraysAnimalIndex]);
 addTestimonials(11, testimonials, carousel);
 
 leftArrow.onclick = () => {
+  // sliderAnimation = true;
+  if (sliderAnimation === true) {
+    return;
+  }
   changeSlideArray("left");
   animationSlider("left");
 };
 
 rightArrow.onclick = () => {
-  changeSlideArray("rigth");
+  // sliderAnimation = true;
+
+  if (sliderAnimation === true) {
+    return;
+  } else changeSlideArray("rigth");
   animationSlider("rigth");
 };
 
 function animationSlider(direction) {
   const container_animal = document.querySelectorAll(".container_animal");
   if (direction === "rigth") {
+    sliderAnimation = true;
     for (let i = 0; i < container_animal.length; i++) {
+      // sliderAnimation = true
       container_animal[i].classList.remove("animation_rigth");
       container_animal[i].classList.add("animation_left");
     }
   } else if (direction === "left") {
+    sliderAnimation = true;
     for (let i = 0; i < container_animal.length; i++) {
       container_animal[i].classList.remove("animation_left");
       container_animal[i].classList.add("animation_rigth");
     }
   }
+  setTimeout(() => {
+    sliderAnimation = false;
+  }, 200);
 }
 
 //  functions
